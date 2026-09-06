@@ -2,6 +2,8 @@
 
 Status: planning draft, September 6, 2026. These are structural wireframes and draft copy, not finished visual designs or a website implementation. The owner has not yet approved the scheduler, service menu, operating policies, or budget.
 
+Confirmed since the first draft: current scheduling is manual; hosting will be Netlify with low expected traffic; budget is undecided; online payments/deposits are excluded from MVP and may be evaluated later.
+
 Read alongside the [design and SEO direction](02-design-and-seo.md), [MVP requirements](01-product-plan.md), and [technology comparison](03-technology-and-booking.md).
 
 ## Recommended homepage composition
@@ -146,7 +148,7 @@ The owner supplies or approves business facts. The developer organizes and forma
 | Logo | Existing logo/wordmark and permission to use it | Pending; propose a text wordmark if none exists |
 | Phone and hours | Public phone, weekly hours, holiday handling | Owner confirmation required |
 | Services | Current public menu, inclusions, prices, durations, removal and add-on rules | Required before provider evaluation and service copy approval |
-| Booking operations | Current calendar/POS, staff eligibility, capacity, buffers, time off | Required before scheduler selection; document operational rules without customer data |
+| Booking operations | Current manual tools, staff eligibility, capacity, buffers, time off | Manual scheduling confirmed; specifics required before scheduler selection; document rules without customer data |
 | Hero photography | One primary nail image; portrait and landscape crops if available | Owner-approved real work preferred |
 | Gallery | 8–12 nail photos, service/style labels, publication permission | Launch with a smaller approved set if necessary |
 | Salon imagery | Interior and storefront photos | Required for the proposed layout; owner-approved layout adjustment if unavailable |
@@ -188,7 +190,7 @@ For hosted scheduling, the provider controls the exact screens. The following de
 | Technician | Any eligible technician or named choice, if approved | Only staff who can perform the service are offered |
 | Date/time | Available times and salon-local timezone | Account for service duration, buffers, staff calendar, and resources |
 | Details | Necessary contact fields and optional notes | Accessible errors; no separate website account required in the proposed MVP |
-| Review | Service, technician, date/time, price, location, and policy | Explicit final confirmation action; deposits only if separately approved |
+| Review | Service, technician, date/time, price, location, and policy | Explicit final confirmation action; no card or payment collection in MVP |
 | Result | Provider-confirmed appointment or clear unresolved status | A failed/uncertain submission must not show success or invite repeated blind retries |
 | Manage | Secure provider link to view, reschedule, or cancel | Confirm ownership and policy eligibility before changing the appointment |
 
@@ -196,15 +198,15 @@ On reschedule, show the existing appointment, choose a new available time, revie
 
 ## Operating choices still needed
 
-The initial requirements already list these questions; this table makes the tradeoffs concrete for owner review. None of these proposed defaults is an approved salon policy.
+The initial requirements already list these questions; this table makes the tradeoffs concrete for owner review. The no-online-payment MVP scope is confirmed; other proposed defaults remain pending.
 
 | Choice | Proposed default to evaluate | What could change it |
 | --- | --- | --- |
-| Calendar authority | One provider calendar for online, phone, and walk-ins | Existing system may already meet requirements |
+| Calendar authority | Move manual appointments into one provider calendar for online, phone, and walk-ins | Staff entry and reconciliation must be practical before online booking opens |
 | Confirmation | Instant for standardized, reliably timed services | Complex nail art or staffing review may require an explicit request/approval workflow |
 | Service combinations | One service or predefined bundle for initial launch | Frequent manicure/pedicure combinations or multi-staff services may require richer scheduling immediately |
 | Technician preference | Any eligible technician, with optional named choice | Salon assignment/rotation practices |
-| Payment | Pay at salon | Owner-required deposits or no-show protection |
+| Payment | Confirmed: no online payment, deposit, or card hold | Owner may approve payment options in a later phase |
 | Appointment management | Guest management through secure provider links | Provider limitations; avoid introducing an unnecessary new account |
 | Reminder | Provider-managed email; evaluate a 24-hour reminder | Owner preference, appointments booked at short notice, supported channels and costs |
 | Cancellation cutoff | No number selected yet | Owner must define policy before customer-facing copy is written |
@@ -215,6 +217,6 @@ Test a real daily workflow before selection: an online booking arrives, a staff 
 
 ## Next review gate
 
-First resolve current booking/POS and available budget, then obtain the service menu and operational rules. Those answers determine whether the existing provider can be retained and whether hosted scheduling meets the MVP.
+Current scheduling is manual, hosting is Netlify, and budget is undecided. Next obtain the service menu, bookable staff count, and operational rules, then compare the least expensive provider plans that meet those needs. Keep hosting and booking costs separate and obtain approval before spending.
 
 The next proposed design deliverable is a static desktop/mobile visual mockup of the homepage using this structure and the existing palette. Obtain explicit approval before beginning that design phase. Provider account setup, paid tools, website implementation, and production deployment remain separate approval gates. No new subscriptions or dates are committed by this wireframe draft.

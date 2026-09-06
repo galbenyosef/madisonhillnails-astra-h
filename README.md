@@ -29,6 +29,8 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 
 - Owner-confirmed address: **349 Main St, Madison, NJ 07940**. The initial street-number discrepancy is resolved; phone, hours, and official profiles still need confirmation.
 - GitHub destination: [zdmediacom/madisonhillnails-astra-h](https://github.com/zdmediacom/madisonhillnails-astra-h), branch `main`. Commit author: Leo, using the account's ID-based GitHub noreply email. Git history records committed deliveries; verify remote publication for each push.
-- Confirm current booking/POS system, service menu, staffing, budget, and official social profiles.
+- Current scheduling is manual. Plan a staff-assisted move to one digital calendar; confirm the service menu, staffing, and official social profiles.
+- Hosting: Netlify, selected by the owner; low traffic expected. Budget is undecided, so show hosting and scheduling costs separately before any purchase.
+- MVP appointments require no online payment, deposit, or card hold. Payment options to secure appointments are a future possibility only.
 
 The documentation is a reviewable proposal. Decisions marked pending must not be treated as approved requirements or verified business facts.

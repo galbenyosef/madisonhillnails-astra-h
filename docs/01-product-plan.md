@@ -8,6 +8,8 @@ Help local customers discover Madison Hill Nails, understand its services and pr
 
 Primary audiences: new local visitors comparing salons; returning customers ready to book; staff managing capacity. Launch with one location, English content, and appointment times explicitly shown in `America/New_York`. Language expansion depends on owner input.
 
+Owner clarification: appointments are currently managed manually; the website will be hosted on Netlify and is expected to have low traffic. Initial and monthly budgets are undecided. Online payments, deposits, and card holds are excluded from MVP; the owner may add payment options to secure appointments later.
+
 ## Scope boundaries
 
 The user requires scheduling in the MVP. This proposal also includes guest rescheduling/cancellation through the booking provider and basic provider-managed email confirmations/reminders at launch, so those conveniences do not have to wait for a native app. SMS is conditional on the chosen plan and owner approval. These additions are recommendations, not yet approved requirements.
@@ -49,7 +51,7 @@ Initial recommendation: one customer and one service or a predefined service bun
 | B10 | Staff calendar | Staff can create telephone/walk-in bookings, edit appointments, block time, record cancellations/no-shows, and view relevant customer details. |
 | B11 | Administrative setup | Owner controls staff eligibility, services, prices, durations, hours, holidays, and policy settings through the provider dashboard. |
 | B12 | Appointment states | Staff and customer messages distinguish requested versus confirmed appointments if manual approval is enabled; canceled/no-show/completed states are reflected accurately. |
-| B13 | Payment policy | Proposed default is pay at salon. Deposits/card holds require a separate owner decision and provider feasibility check. Website never stores raw card details. |
+| B13 | No online payment requirement | Booking succeeds without collecting payment, a deposit, or a card hold. Keep existing in-person payment handling outside the website; confirm accepted methods for public copy. Payment integration is deferred. |
 | B14 | Staff access | Individual provider accounts and appropriate permissions; test that staff cannot access owner-only configuration unintentionally. |
 
 ## Booking journey
@@ -71,6 +73,8 @@ flowchart TD
 ## Deferred features
 
 Native mobile apps; custom customer accounts/dashboard; loyalty and referrals; gift card sales; online product sales; memberships; waitlists; group/bridal bookings; advanced multi-service allocation; multilingual content; custom staff software; marketing campaigns; custom notification service. Move a feature into MVP only when an operational need justifies its implementation and cost.
+
+Online payments, booking deposits, card-on-file collection, and no-show charging are explicitly deferred by the owner. Do not add checkout screens, payment SDKs, or payment credentials to MVP. Booking confirmations must not imply a payment was taken.
 
 ## Success measures
 

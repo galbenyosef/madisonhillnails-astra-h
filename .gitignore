@@ -46,6 +46,7 @@ dist/
 build/
 coverage/
 .vercel/
+.netlify/
 .expo/
 *.log
 .DS_Store

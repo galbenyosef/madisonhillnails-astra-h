@@ -39,8 +39,8 @@ Apple Maps details were visible in search results; a subsequent direct open retu
 | [Tailwind theme variables](https://tailwindcss.com/docs/theme) | Reusable brand tokens |
 | [Expo documentation](https://docs.expo.dev/) | Future cross-platform app option |
 | [Supabase row-level security](https://supabase.com/docs/guides/database/postgres/row-level-security) | Optional later customer-data access controls |
-| [Vercel pricing](https://vercel.com/pricing) | Hosting budget |
-| [Vercel Hobby limits](https://vercel.com/docs/plans/hobby) | Noncommercial restriction; use appropriate commercial hosting |
+| [Netlify pricing](https://www.netlify.com/pricing/) | Owner-selected hosting; plan costs, usage limits, and account-specific plan verification |
+| [Next.js on Netlify](https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/) | OpenNext support, rendering, caching, image handling, and implementation-time compatibility checks |
 | [Google JavaScript SEO](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) | Rendered content and crawlability |
 | [Google local business structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business) | Business schema planning |
 | [Google review structured data](https://developers.google.com/search/docs/appearance/structured-data/review-snippet) | Self-serving review limitation |

@@ -16,6 +16,21 @@ Status: sequencing proposal, not authorization to build or a delivery-date commi
 
 Scheduling feasibility should precede any design promise about a fully custom booking interface. Calendar migration, if needed, requires a separate reviewed plan for data mapping, upcoming appointments, customer communications, cutover, and rollback.
 
+### Moving from manual appointments to online booking
+
+The owner confirmed current scheduling is manual. The following is a proposed launch procedure for later approval, not authorization to import customer records now.
+
+1. Identify the person responsible for keeping the calendar current, the current manual record format, and staff access to a phone/tablet/computer at reception. No assumption that a paper calendar or existing payment terminal must be replaced.
+2. Configure the approved service menu, durations, buffers, eligible staff, resource capacity, business hours, and booking policy in the selected scheduler.
+3. With online availability closed, enter upcoming appointments and time-off blocks from the manual records. Staff verify dates, times, services, durations, assignments, and contact details in the private provider dashboard. Keep customer data out of GitHub.
+4. Check whether imported/manual entries trigger messages; suppress unwanted duplicates during setup and approve any customer communication before sending it.
+5. Rehearse an online booking, telephone booking, walk-in, reschedule, and cancellation. Staff must be able to enter a phone/walk-in appointment immediately so it blocks online availability.
+6. Choose a cutover time and enter any appointments added since the initial transfer. Reconcile the manual and digital schedule before opening online booking.
+7. Make the digital calendar authoritative at launch. Manual notes may be a temporary backup, but must not become an independently maintained second booking calendar.
+8. If the provider is unavailable, close online booking where possible, record incoming requests for staff confirmation, and reconcile before reopening. Do not promise an unverified time slot. Review the first week daily for missing bookings or notification errors.
+
+Netlify is the chosen website host. Before launch, verify the actual account's plan/usage budget and who receives usage alerts. Check the intended production publishing behavior so a documentation or preview change does not accidentally trigger an unapproved release. Low expected traffic informs the initial plan but does not guarantee free hosting indefinitely.
+
 ## Future roadmap
 
 | Priority | Feature | Dependency / reason to add |
@@ -23,7 +38,7 @@ Scheduling feasibility should precede any design promise about a fully custom bo
 | Next | Dedicated service pages | Confirmed services, substantial content, and search demand |
 | Next | Owner content editing | Frequent menu/gallery changes justify CMS cost and training |
 | Next | SMS reminders | Provider capability, owner approval, customer communication preferences, delivery cost |
-| Next | Deposits/no-show protection | Approved policy and provider-supported payment/refund behavior |
+| Later, optional | Payments/deposits to secure appointments | Explicitly excluded from MVP by owner. Requires separate scope approval, policy, provider support, failed-payment handling, refunds, and reconciliation. |
 | Later | Customer account and rebooking | Secure identity-to-provider customer mapping, API rights, observed repeat usage |
 | Later | Waitlist | Staff capacity workflow and provider support; avoid promising automatic allocation without validation |
 | Later | Loyalty/referrals/gift cards | Owner economics, provider support, and redemption handling |

@@ -39,7 +39,7 @@ Do not add a secret-scanner baseline or allowlist to hide findings. Review false
 
 ## Where configuration belongs
 
-Keep real values in local ignored environment files or approved hosting/CI secret storage. Document only variable names and empty placeholders in Markdown. Public client configuration must contain no secrets. Keep downloaded CLI binaries, login state, and secret scan reports outside this repository. GitHub CLI sign-in is managed locally; do not copy its configuration into project files.
+Keep real values in local ignored environment files or approved hosting/CI secret storage. Document only variable names and empty placeholders in Markdown. Public client configuration must contain no secrets. Keep downloaded CLI binaries, login state, and secret scan reports outside this repository. GitHub CLI sign-in is managed locally; do not copy its configuration into project files. Netlify is the selected host; its local `.netlify/` state is also ignored, and any future server credentials belong in approved hosting settings rather than tracked files.
 
 ## If a secret is found
 
