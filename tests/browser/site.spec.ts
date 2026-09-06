@@ -7,7 +7,7 @@ test("home is accessible, responsive, and has verified local SEO details", async
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
   await expect(page).toHaveTitle(/Madison Hill Nails/);
-  await expect(page.locator("h1")).toHaveText(/Good nails.*Great energy/);
+  await expect(page.locator("h1")).toHaveText(/A little time.*All yours/);
   const schema = JSON.parse(
     await page.locator('script[type="application/ld+json"]').innerText(),
   );
@@ -50,6 +50,15 @@ test("home is accessible, responsive, and has verified local SEO details", async
       expect(lettering).toBeLessThanOrEqual(width);
     }
   }
+  for (const photo of await page.locator("#gallery img").all()) {
+    await photo.scrollIntoViewIfNeeded();
+    await expect
+      .poll(() =>
+        photo.evaluate((element) => (element as HTMLImageElement).naturalWidth),
+      )
+      .toBeGreaterThan(0);
+  }
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await page
     .locator("header .brandmark")
     .screenshot({ path: `test-results/logo-${info.project.name}.png` });
@@ -63,6 +72,41 @@ test("home is accessible, responsive, and has verified local SEO details", async
     fullPage: true,
     style: "nextjs-portal { display: none; }",
   });
+});
+test("hero parallax respects pause and reduced motion, with gallery navigation", async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto("/");
+  const hero = page.locator(".white-hero");
+  await expect(hero).toHaveAttribute("data-motion", "running");
+  const offsets = () =>
+    hero
+      .locator(".hero-layer")
+      .evaluateAll((layers) =>
+        layers.map(
+          (layer) =>
+            new DOMMatrixReadOnly(getComputedStyle(layer).transform).m42,
+        ),
+      );
+  const before = await offsets();
+  await page.evaluate(() => window.scrollTo({ top: 320, behavior: "instant" }));
+  await expect
+    .poll(async () => (await offsets())[0] - before[0])
+    .toBeGreaterThan(15);
+  expect((await offsets())[1]).toBeLessThan(before[1]);
+  await page.getByRole("button", { name: "Pause motion" }).click();
+  await expect(hero).toHaveAttribute("data-motion", "still");
+  await expect.poll(offsets).toEqual([0, 0, 0, 0]);
+  await page.getByRole("button", { name: "Resume motion" }).click();
+  await expect(hero).toHaveAttribute("data-motion", "running");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expect.poll(offsets).toEqual([0, 0, 0, 0]);
+  await page
+    .getByRole("link", { name: "Explore our work", exact: true })
+    .click();
+  await expect(page.locator("#gallery")).toBeInViewport();
+  await expect(page.locator("#gallery .gallery-photo-link")).toHaveCount(4);
 });
 test("color selection and navigation work with reduced motion", async ({
   page,

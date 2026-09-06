@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { BrandMark } from "@/components/brand-mark";
 import "./globals.css";
 import "./editorial.css";
+import "./white-hero.css";
 const origin = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(origin),

@@ -30,7 +30,7 @@ export function SiteHeader() {
         onClick={() => setOpen(false)}
       >
         <Link href="/#services">The menu</Link>
-        <Link href="/#color">Color story</Link>
+        <Link href="/#gallery">Gallery</Link>
         <Link href="/#visit">Visit us</Link>
         <Link href="/appointments">My appointments</Link>
         <Link className="button small" href="/book">

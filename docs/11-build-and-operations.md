@@ -6,7 +6,7 @@ September 6, 2026. Implementation follows [the approved scope](10-approved-build
 
 | Area | Behavior |
 | --- | --- |
-| Public website | Colorful one-page design, mobile navigation and booking button, stationary editorial imagery and a black NAILS & SPA wordmark, interactive color inspiration, address/directions, FAQ, policies, and privacy notice. |
+| Public website | Colorful one-page design, mobile navigation and booking button, a clean white hero with decorative parallax, a real-photo gallery, and a black NAILS & SPA wordmark, interactive color inspiration, address/directions, FAQ, policies, and privacy notice. |
 | SEO | Server-rendered public copy, page metadata, canonical links, social preview image, favicon, sitemap, and NailSalon structured data containing the confirmed address. Previews default to noindex; private routes always remain noindex. |
 | Authentication | Better Auth email/password signup and login, email verification, password reset, secure sessions, authenticator enrollment and recovery codes. |
 | Customer appointments | Verified-account booking, qualified technician/time selection, upcoming/history view, rescheduling, cancellation, and account booking restrictions. |
@@ -113,6 +113,6 @@ Test restoring an export with `pg_restore` into a separate non-production databa
 
 ## Visual asset and future work
 
-The current homepage uses four real nail photographs from the owner-supplied Instagram account, stored as `public/images/salon-*.jpg`. See [photo provenance](14-salon-photography.md) for the exact files and original post links. The images are served locally through Next/Image, with no embedded Instagram feed, tracking script, API credentials, or runtime reliance on expiring Instagram CDN URLs. The earlier generated artwork remains unused for design history. Interactive polish samples are CSS artwork and remain labeled as inspiration. Icons come from Lucide; system fonts avoid third-party font requests. The current wordmark and static layout are documented in [the design record](13-editorial-redesign.md).
+The current homepage uses four real nail photographs from the owner-supplied Instagram account, stored as `public/images/salon-*.jpg`. See [photo provenance](14-salon-photography.md) for the exact files and original post links. The images are served locally through Next/Image, with no embedded Instagram feed, tracking script, API credentials, or runtime reliance on expiring Instagram CDN URLs. The earlier generated artwork remains unused for design history. Interactive polish samples are CSS artwork and remain labeled as inspiration. Icons come from Lucide; system fonts avoid third-party font requests. The current white hero, gallery, and motion behavior are documented in [the latest design record](15-white-hero-and-gallery.md).
 
 Future work: owner-approved portfolio and review/profile links, optional SMS verification/reminders with a separately approved budget, native mobile app using shared booking rules/APIs, passkeys/social login, customer linkage for manual appointments with verified consent, shared-station capacity, notification delivery webhooks, and any separately approved payment design. No saved-card or fee scaffolding is present in this release.

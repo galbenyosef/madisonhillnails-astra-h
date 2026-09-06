@@ -1,5 +1,7 @@
 # Editorial redesign — September 6, 2026
 
+Historical design record. [The latest white hero and gallery direction](15-white-hero-and-gallery.md) supersedes the hero, image placement, and motion behavior below; the black NAILS & SPA wordmark remains current.
+
 The owner rejected the first visual direction, asked whether it included parallax, and approved a fashion editorial redesign before implementation. The original effect moved only the hero image by up to 35 pixels; that did not match the requested layered experience.
 
 ## Design and content

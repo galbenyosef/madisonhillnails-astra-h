@@ -53,180 +53,6 @@
 .editorial-home .button:hover {
   background: #92231e;
 }
-.edit-topline {
-  padding-block: 25px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 9px;
-  letter-spacing: 1.5px;
-}
-.topline-dot {
-  margin-inline: 15px;
-  color: #b52b23;
-}
-
-.edit-title-row {
-  position: relative;
-  padding-block: 12px 34px;
-}
-.edit-title-row h1 {
-  font:
-    600 clamp(95px, 10vw, 152px)/0.86 Arial,
-    Helvetica,
-    sans-serif;
-  letter-spacing: -0.085em;
-  color: var(--berry);
-}
-.edit-title-row h1 em {
-  display: block;
-  font-family: Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.075em;
-  padding-left: 17%;
-  line-height: 1.02;
-}
-.edit-intro {
-  position: absolute;
-  right: 0;
-  top: 18px;
-  width: 210px;
-}
-.edit-intro > svg {
-  width: 52px;
-  height: 52px;
-  margin-bottom: 12px;
-  stroke-width: 1.1;
-  color: var(--berry);
-}
-.edit-intro p {
-  font-size: 13px;
-  line-height: 1.55;
-}
-.edit-intro > span {
-  display: block;
-  font-size: 8px;
-  letter-spacing: 1.8px;
-  margin-top: 12px;
-}
-.edit-campaign {
-  position: relative;
-  height: clamp(400px, 32vw, 480px);
-  margin-top: -4px;
-}
-.campaign-image {
-  position: absolute;
-  inset: 0 0 0 13%;
-  overflow: hidden;
-  background: #d6dbc4;
-}
-.image-plane {
-  position: absolute;
-  inset: -22% 0;
-}
-.image-plane img {
-  object-fit: cover;
-}
-
-.campaign-image img {
-  object-position: 57% center;
-}
-.campaign-index {
-  position: absolute;
-  right: 24px;
-  top: 22px;
-  font-size: 9px;
-  letter-spacing: 1.6px;
-  padding: 6px 8px;
-  background: #eaf0dccc;
-}
-.campaign-note {
-  position: absolute;
-  top: 12px;
-  left: 0;
-  font-size: 10px;
-  letter-spacing: 1.7px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-.campaign-note em {
-  font:
-    italic 17px/1.7 Georgia,
-    serif;
-  letter-spacing: -0.3px;
-}
-.floating-print {
-  position: absolute;
-  width: 20.5%;
-  left: 0;
-  bottom: -12px;
-  z-index: 2;
-}
-.floating-print figure {
-  margin: 0;
-  padding: 10px 10px 0;
-  background: white;
-  transform: rotate(-8deg);
-  box-shadow: 0 12px 35px #25231b24;
-}
-.print-image {
-  position: relative;
-  aspect-ratio: 0.81;
-}
-.print-image img {
-  object-fit: cover;
-}
-.floating-print figcaption {
-  font-size: 8px;
-  letter-spacing: 1.2px;
-  padding: 14px 0;
-  text-align: center;
-}
-.booking-orbit {
-  position: absolute;
-  bottom: -35px;
-  right: 35px;
-  border-radius: 50%;
-  width: 152px;
-  aspect-ratio: 1;
-  background: var(--acid);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  z-index: 3;
-  transition:
-    background 0.2s,
-    rotate 0.3s;
-}
-.booking-orbit span {
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  line-height: 1.5;
-}
-.booking-orbit:hover {
-  background: #d5e876;
-  rotate: 7deg;
-}
-.campaign-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 63px;
-  font-size: 8px;
-  letter-spacing: 1.3px;
-  gap: 20px;
-}
-.campaign-bottom > span,
-.campaign-bottom a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
 .edit-manifesto {
   padding-block: 145px 110px;
   border-bottom: 1px solid var(--line);
@@ -393,64 +219,6 @@
   font-size: 13px;
   justify-self: end;
 }
-.color-collage {
-  position: relative;
-  margin-top: 55px;
-  padding-left: 13%;
-}
-.color-photo {
-  position: relative;
-  width: 52%;
-  height: clamp(450px, 47vw, 675px);
-  background: #ab96c4;
-  overflow: hidden;
-}
-.color-photo img {
-  object-position: center;
-}
-.photo-label {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: #ffffffef;
-  padding: 7px 10px;
-  font-size: 8px;
-  letter-spacing: 1.2px;
-}
-.color-caption {
-  position: absolute;
-  left: 51%;
-  top: 34%;
-  display: flex;
-  flex-direction: column;
-  color: var(--berry);
-  z-index: 2;
-}
-.color-caption > span {
-  font:
-    500 clamp(32px, 4.6vw, 65px)/1 Arial,
-    sans-serif;
-  letter-spacing: -0.075em;
-  background: var(--acid);
-  padding: 8px 20px 14px;
-  rotate: -6deg;
-  white-space: nowrap;
-}
-.color-caption em {
-  font:
-    italic clamp(60px, 7.5vw, 105px)/1.1 Georgia,
-    serif;
-  margin-left: 12px;
-  letter-spacing: -0.07em;
-  padding-top: 12px;
-  white-space: nowrap;
-}
-.color-caption svg {
-  width: 90px;
-  height: 90px;
-  margin: 35px 0 0 75px;
-  stroke-width: 1;
-}
 .editorial-home .color-studio {
   margin-top: 65px;
   border-radius: 0;
@@ -552,33 +320,6 @@
   gap: 11%;
   align-items: center;
 }
-.local-art {
-  position: relative;
-  height: 580px;
-  background: #d7ddc8;
-  overflow: hidden;
-}
-.local-art img {
-  object-position: 71% center;
-}
-.local-stamp {
-  position: absolute;
-  bottom: 90px;
-  left: 25px;
-  width: 165px;
-  height: 165px;
-  border-radius: 50%;
-  background: var(--acid);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: -0.3px;
-  line-height: 1.2;
-  gap: 10px;
-}
 .local-copy .edit-label {
   margin-bottom: 28px;
 }
@@ -673,21 +414,6 @@
   .edit-wrap {
     width: calc(100% - 64px);
   }
-  .edit-intro {
-    width: 170px;
-    top: 4px;
-  }
-  .edit-intro > svg {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 6px;
-  }
-  .edit-intro p {
-    font-size: 11px;
-  }
-  .edit-title-row h1 {
-    font-size: 10.7vw;
-  }
   .manifesto-foot {
     gap: 30px;
   }
@@ -696,9 +422,6 @@
   }
   .editorial-header .navigation {
     gap: 20px;
-  }
-  .local-art {
-    height: 480px;
   }
 }
 @media (max-width: 760px) {
@@ -712,128 +435,6 @@
 
   .editorial-header .navigation {
     top: 100%;
-  }
-  .edit-topline {
-    padding-top: 16px;
-    padding-bottom: 12px;
-    font-size: 7px;
-    letter-spacing: 0.7px;
-    gap: 10px;
-  }
-  .topline-dot {
-    margin-inline: 6px;
-  }
-
-  .edit-title-row {
-    padding-block: 5px 22px;
-  }
-  .edit-title-row h1 {
-    font-size: clamp(44px, 13.7vw, 100px);
-    letter-spacing: -0.085em;
-  }
-  .edit-title-row h1 em {
-    padding-left: 9%;
-    line-height: 1.15;
-  }
-  .edit-intro {
-    position: static;
-    width: auto;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 17px;
-  }
-  .edit-intro > svg {
-    width: 30px;
-    height: 30px;
-    margin: 0;
-  }
-  .edit-intro p {
-    font-size: 11px;
-  }
-  .edit-intro > span {
-    display: none;
-  }
-  .edit-campaign {
-    height: 365px;
-    margin-top: 0;
-  }
-  .campaign-image {
-    inset: 0 -20px 0 9%;
-  }
-  .campaign-image img {
-    object-position: 66% center;
-  }
-  .campaign-index {
-    top: 12px;
-    right: 12px;
-    font-size: 7px;
-    letter-spacing: 1px;
-  }
-  .campaign-note {
-    left: -3px;
-    top: 13px;
-    writing-mode: vertical-rl;
-    font-size: 7px;
-    letter-spacing: 1.3px;
-    gap: 10px;
-  }
-  .campaign-note br {
-    display: none;
-  }
-  .campaign-note em {
-    display: none;
-  }
-  .campaign-note > svg {
-    width: 14px;
-    height: 14px;
-  }
-  .floating-print {
-    width: 38%;
-    bottom: -13px;
-    left: 2px;
-  }
-  .floating-print figure {
-    padding: 6px 6px 0;
-    rotate: 3deg;
-  }
-  .floating-print figcaption {
-    font-size: 5px;
-    letter-spacing: 0.4px;
-    padding-block: 9px;
-  }
-  .booking-orbit {
-    width: 105px;
-    right: 5px;
-    bottom: -24px;
-    gap: 5px;
-  }
-  .booking-orbit svg {
-    width: 28px;
-    height: 28px;
-  }
-  .booking-orbit span {
-    font-size: 8px;
-    letter-spacing: 0.8px;
-  }
-  .campaign-bottom {
-    padding-top: 50px;
-    gap: 15px;
-    font-size: 7px;
-    letter-spacing: 0.65px;
-    flex-wrap: wrap;
-  }
-  .campaign-bottom > span:nth-child(2) {
-    order: 3;
-    flex-basis: 100%;
-    font-size: 6px;
-  }
-  .campaign-bottom > a {
-    margin-left: auto;
-  }
-  .campaign-bottom svg {
-    width: 10px;
-    height: 10px;
   }
   .edit-manifesto {
     padding-block: 85px 65px;
@@ -932,35 +533,6 @@
     text-align: right;
     padding-bottom: 5px;
   }
-  .color-collage {
-    margin-top: 35px;
-    padding: 0 0 55px;
-  }
-  .color-photo {
-    width: 78%;
-    height: 440px;
-  }
-  .photo-label {
-    font-size: 6px;
-    left: 10px;
-    bottom: 10px;
-  }
-  .color-caption {
-    left: auto;
-    right: 0;
-    top: 64%;
-  }
-  .color-caption > span {
-    font-size: 32px;
-    padding: 7px 12px 10px;
-  }
-  .color-caption em {
-    font-size: 59px;
-    margin-left: 20px;
-  }
-  .color-caption svg {
-    display: none;
-  }
   .editorial-home .color-studio {
     grid-template-columns: 1fr;
     margin-top: 10px;
@@ -999,20 +571,6 @@
     padding-block: 75px;
     grid-template-columns: 1fr;
     gap: 42px;
-  }
-  .local-art {
-    height: 430px;
-  }
-  .local-stamp {
-    width: 125px;
-    height: 125px;
-    font-size: 13px;
-    left: 20px;
-    bottom: 50px;
-  }
-  .local-stamp svg {
-    width: 26px;
-    height: 26px;
   }
   .editorial-home .local-copy h2 {
     font-size: 56px;
@@ -1060,11 +618,6 @@
     padding: 14px 20px;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .booking-orbit:hover {
-    rotate: none;
-  }
-}
 
 /* Owner-requested black, equal-width NAILS & SPA wordmark. */
 .brandmark {
@@ -1088,48 +641,7 @@
     width: 160px;
   }
 }
-
-/* Preserve the salon's full nail designs instead of cropping them into a banner. */
-.salon-campaign {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  background: #f0efeb;
-}
-.salon-campaign .image-plane {
-  position: relative;
-  inset: auto;
-  min-width: 0;
-}
-.salon-campaign .image-plane img {
-  object-fit: contain;
-  object-position: center;
-}
-.print-image {
-  display: block;
-}
-.color-photo,
-.local-art {
-  background: #f0efeb;
-}
-.color-photo .image-plane,
-.local-art .image-plane {
-  inset: 0;
-}
-.color-photo .image-plane img,
-.local-art .image-plane img {
-  object-fit: contain;
-  object-position: center;
-}
 .art-credit a {
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-@media (max-width: 760px) {
-  .salon-campaign {
-    grid-template-columns: 1fr;
-  }
-  .salon-campaign .campaign-companion {
-    display: none;
-  }
 }
