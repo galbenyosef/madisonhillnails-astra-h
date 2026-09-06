@@ -14,6 +14,7 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 4. [Roadmap, validation, and operating plan](docs/04-delivery-and-roadmap.md)
 5. [Decisions, open questions, and approval record](docs/05-decisions-and-questions.md)
 6. [Research sources and business fact checks](docs/06-research.md)
+7. [Desktop/mobile wireframes, draft copy, and content checklist](docs/07-wireframes-and-content.md)
 
 ## Working agreement
 

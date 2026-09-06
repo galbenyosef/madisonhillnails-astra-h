@@ -1,6 +1,6 @@
 # Design direction and SEO
 
-Status: proposal. No mockups or site implementation have been created.
+Status: proposal. [Structural desktop/mobile wireframes and draft content](07-wireframes-and-content.md) are available for planning review. No finished visual mockups or site implementation have been created.
 
 ## Creative concept: Color, close to home
 
