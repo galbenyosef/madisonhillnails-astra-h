@@ -59,6 +59,8 @@ Starting state: empty project folder, no Git repository or remote, Git installed
 
 First delivery: documentation-only commit after author identity is known, push to the specified authorized repository, and verify the remote commit. If the destination already has content, inspect and reconcile its history; do not force-push. Account authentication must be established through an approved local flow, not credentials pasted into documentation or chat.
 
+GitHub CLI setup: with user approval, installed official `gh` version 2.100.0 for Intel macOS at `~/.local/bin/gh`. Verified the downloaded archive against the SHA-256 digest in the official GitHub release metadata before installation. Use the full executable path if `~/.local/bin` is not on the shell's PATH; no shell startup files were changed. Authentication uses the CLI's browser flow: `~/.local/bin/gh auth login --hostname github.com --git-protocol https --web`. Enter the temporary code only on GitHub's device sign-in page. Never commit tokens or device codes. Reference: [GitHub CLI authentication manual](https://cli.github.com/manual/gh_auth_login).
+
 Later work: small commits tied to approved features; reviewable branches/PRs; documentation updated with scope changes. Add build/type/lint checks and relevant tests when implementation exists. Production deployment remains a separate explicit approval even if GitHub has automatic deployment integrations.
 
 Maintain this plan, decision record, source log, content inventory, architecture decisions, environment-variable names without values, validation evidence, launch/runbook notes, and release history. A Git push is complete only when remote verification succeeds.

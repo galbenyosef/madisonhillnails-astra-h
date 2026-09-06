@@ -35,7 +35,7 @@ Updated September 6, 2026.
 | --- | --- | --- |
 | Q01 | Address resolved by owner: 349 Main St, Madison, NJ 07940. Official phone, hours, and location/map link still need confirmation. | Final copy, schema, directions, launch |
 | Q02 | Resolved: user supplied `https://github.com/zdmediacom/madisonhillnails-astra-h`; preserve existing visibility. | Remote configured |
-| Q03 | Author resolved: Leo; use account-ID GitHub noreply email `141753357+zdmediacom@users.noreply.github.com`. Verify authenticated write access during push. | First commit/push |
+| Q03 | Resolved: author Leo with account-ID GitHub noreply email `141753357+zdmediacom@users.noreply.github.com`; GitHub authentication and repository write access verified. | Complete |
 | Q04 | Does the salon use a booking or POS system today? How are phone and walk-in appointments recorded? | Provider decision |
 | Q05 | What are the official Instagram, Yelp, and Google Business Profile links? | Gallery/reviews/local SEO |
 | Q06 | What services, prices, durations, removal/add-ons, bundles, staff qualifications, and shared resources exist? | Scheduling feasibility and service content |
@@ -60,4 +60,6 @@ Ask these progressively. Repository destination, address, and author name are re
 - Owner confirmed street number 349 and commit author Leo. Public GitHub API confirmed account ID 141753357, enabling its standard ID-based noreply email.
 - First planning commit created locally: `0f0eb9e` on `main`, authored by Leo with the GitHub noreply email.
 - `git push -u origin main` failed: HTTPS could not obtain a GitHub username/credential in this environment. SSH fallback check stopped because GitHub's ED25519 host key is not configured; SSH authentication was not established or tested beyond that point.
-- Remote publication remains incomplete. A user-approved GitHub authentication setup is needed; no credentials should be pasted into chat. Retry the authorized push after sign-in and verify remote `main` equals local `HEAD`.
+- The initial push required a GitHub authentication setup; this blocker was subsequently resolved as recorded below.
+- User approved GitHub CLI authentication setup. Installed the official CLI release after SHA-256 verification and initiated browser device sign-in. Installation path and repeatable sign-in instructions are recorded in the delivery plan; no credentials or temporary codes are stored in this repository.
+- Browser sign-in completed as `zdmediacom`. Verified the target repository and write access; preserved its existing public visibility. Pushed the initial planning commits to `origin/main` and verified the remote commit matched local `HEAD` (`b6c21d2`). Subsequent documentation commits record this resolution and receive the same push/verification check.

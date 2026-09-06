@@ -4,7 +4,7 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 
 **Status:** planning only, September 6, 2026. No website, application, infrastructure, booking account, or deployment has been built. Technical choices and feature details below are proposals for owner review.
 
-**GitHub delivery:** documents are committed locally. The initial push was blocked by missing HTTPS authentication; an SSH check stopped at missing host-key configuration before authentication. A GitHub sign-in/setup is required to complete and verify publication.
+**GitHub delivery:** planning documents are published on [GitHub, branch main](https://github.com/zdmediacom/madisonhillnails-astra-h/tree/main). The initial authentication blocker was resolved through an owner-authorized GitHub CLI browser sign-in. Remote publication was verified against the local commit.
 
 ## Read the plan
 
