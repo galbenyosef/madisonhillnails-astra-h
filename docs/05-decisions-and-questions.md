@@ -58,4 +58,6 @@ Ask these progressively. Repository destination, address, and author name are re
 - User supplied `zdmediacom/madisonhillnails-astra-h`. Verified the remote has no refs, initialized local Git on `main`, and configured `origin` using the authorized sandbox escalation flow.
 - Checked all seven Markdown files for broken relative links, unclosed code fences, and trailing whitespace; checks passed.
 - Owner confirmed street number 349 and commit author Leo. Public GitHub API confirmed account ID 141753357, enabling its standard ID-based noreply email.
-- Planning documents are prepared for the first commit/push. Git history records delivery commits; report GitHub publication only after remote verification succeeds.
+- First planning commit created locally: `0f0eb9e` on `main`, authored by Leo with the GitHub noreply email.
+- `git push -u origin main` failed: HTTPS could not obtain a GitHub username/credential in this environment. SSH fallback check stopped because GitHub's ED25519 host key is not configured; SSH authentication was not established or tested beyond that point.
+- Remote publication remains incomplete. A user-approved GitHub authentication setup is needed; no credentials should be pasted into chat. Retry the authorized push after sign-in and verify remote `main` equals local `HEAD`.
