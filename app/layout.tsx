@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
+import "./editorial.css";
 const origin = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(origin),
@@ -17,16 +18,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Madison Hill Nails",
-    description:
-      "Your day. A little brighter. Nail care in Madison, New Jersey.",
+    description: "Good nails. Great energy. Nail care in Madison, New Jersey.",
     type: "website",
     locale: "en_US",
     images: [
       {
-        url: "/images/color-study.png",
-        width: 1122,
-        height: 1402,
-        alt: "Decorative nail polish color study",
+        url: "/images/editorial-cherry.png",
+        width: 1536,
+        height: 1024,
+        alt: "Cherry red manicure editorial inspiration",
       },
     ],
   },
@@ -40,10 +40,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </a>
         <SiteHeader />
         {children}
-        <footer className="site-footer">
+        <footer className="site-footer editorial-footer">
           <div className="footer-top">
             <p className="serif">
-              See you soon<span>♥</span>
+              Good nails.<span>Great energy.</span>
             </p>
             <Link className="button citrus" href="/book">
               Make time for yourself ↗

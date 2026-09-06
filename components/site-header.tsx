@@ -5,7 +5,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="site-header">
+    <header className="site-header editorial-header">
       <Link href="/" className="wordmark" aria-label="Madison Hill Nails home">
         madison hill<span>NAILS · MADISON, NJ</span>
       </Link>
@@ -29,7 +29,7 @@ export function SiteHeader() {
         <Link href="/#visit">Visit us</Link>
         <Link href="/appointments">My appointments</Link>
         <Link className="button small" href="/book">
-          Book a little me-time <ArrowUpRight size={17} />
+          Book an appointment <ArrowUpRight size={17} />
         </Link>
       </nav>
     </header>

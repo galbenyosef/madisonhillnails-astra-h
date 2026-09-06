@@ -7,7 +7,7 @@ test("home is accessible, responsive, and has verified local SEO details", async
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
   await expect(page).toHaveTitle(/Madison Hill Nails/);
-  await expect(page.locator("h1")).toHaveText(/Your day.*A little.*brighter/);
+  await expect(page.locator("h1")).toHaveText(/Good nails.*Great energy/);
   const schema = JSON.parse(
     await page.locator('script[type="application/ld+json"]').innerText(),
   );
@@ -32,6 +32,24 @@ test("home is accessible, responsive, and has verified local SEO details", async
     ),
   ).toBe(true);
   expect(errors).toEqual([]);
+  if (info.project.name === "desktop") {
+    for (const width of [320, 768, 1024, 1440]) {
+      await page.setViewportSize({ width, height: 1000 });
+      expect(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+      ).toBe(true);
+      const title = await page.locator("h1").boundingBox();
+      expect(title!.x + title!.width).toBeLessThanOrEqual(width);
+      const lettering = await page.locator("h1 em").evaluate((element) => {
+        const range = document.createRange();
+        range.selectNodeContents(element);
+        return range.getBoundingClientRect().right;
+      });
+      expect(lettering).toBeLessThanOrEqual(width);
+    }
+  }
   await page.screenshot({
     path: `test-results/design-${info.project.name}.png`,
     fullPage: false,
@@ -40,6 +58,7 @@ test("home is accessible, responsive, and has verified local SEO details", async
   await page.screenshot({
     path: `test-results/home-${info.project.name}.png`,
     fullPage: true,
+    style: "nextjs-portal { display: none; }",
   });
 });
 test("color selection and navigation work with reduced motion", async ({
@@ -67,9 +86,45 @@ test("color selection and navigation work with reduced motion", async ({
   await expect(page.locator("#visit")).toBeInViewport();
   expect(
     await page
-      .locator(".parallax img")
+      .locator("[data-depth]")
+      .first()
       .evaluate((el) => getComputedStyle(el).transform),
   ).toBe("none");
+});
+test("parallax moves separate layers and can be paused", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto("/");
+  await expect(page.locator(".editorial-home")).toHaveAttribute(
+    "data-motion",
+    "running",
+  );
+  const layers = page.locator(".edit-hero [data-depth]");
+  const offsets = () =>
+    layers.evaluateAll((items) =>
+      items.map(
+        (item) => new DOMMatrixReadOnly(getComputedStyle(item).transform).m42,
+      ),
+    );
+  const before = await offsets();
+  await page.evaluate(() => window.scrollTo({ top: 350, behavior: "instant" }));
+  await expect
+    .poll(async () => Math.abs((await offsets())[0] - before[0]))
+    .toBeGreaterThan(15);
+  const after = await offsets();
+  expect((after[0] - before[0]) * (after[1] - before[1])).toBeLessThan(0);
+  await page.getByRole("button", { name: "Pause motion" }).click();
+  await expect(page.locator(".editorial-home")).toHaveAttribute(
+    "data-motion",
+    "still",
+  );
+  await expect.poll(offsets).toEqual([0, 0]);
+  await page.getByRole("button", { name: "Resume motion" }).click();
+  await expect(page.locator(".editorial-home")).toHaveAttribute(
+    "data-motion",
+    "running",
+  );
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expect.poll(offsets).toEqual([0, 0]);
 });
 test("unconfigured booking is honest and protected pages redirect", async ({
   page,

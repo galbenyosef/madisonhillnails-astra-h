@@ -1,14 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowDown,
-  ArrowUpRight,
-  MapPin,
-  Sparkles,
-  Flower2,
-  Heart,
-} from "lucide-react";
-import { ColorStudio, Parallax } from "@/components/color-studio";
+import { ArrowDown, ArrowUpRight, Asterisk, MapPin } from "lucide-react";
+import { ColorStudio } from "@/components/color-studio";
+import { EditorialMotion } from "@/components/editorial-motion";
 import { catalog } from "@/lib/data";
 import { money } from "@/lib/format";
 export const dynamic = "force-dynamic";
@@ -39,251 +33,323 @@ export default async function Home() {
           __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
         }}
       />
-      <section className="hero wrap">
-        <div className="hero-copy">
-          <span className="location-tag">
-            <span /> YOUR LITTLE CORNER OF MADISON, NJ
-          </span>
-          <h1>
-            Your day.
-            <br />A little
-            <br />
-            <em>brighter.</em>
-            <Sparkles className="hero-spark" aria-hidden="true" />
-          </h1>
-          <p>
-            A fresh color. A deep breath. A little time that’s just for you.
-            Welcome to Madison Hill Nails.
-          </p>
-          <div className="hero-actions">
-            <Link href="/book" className="button">
-              Find your next appointment <ArrowUpRight size={20} />
-            </Link>
-            <Link href="#services" className="text-link">
-              Explore the menu <ArrowDown size={15} />
+      <EditorialMotion>
+        <section
+          className="edit-hero edit-wrap"
+          aria-labelledby="hero-title"
+          data-scroll-scene
+        >
+          <div className="edit-title-row">
+            <h1 id="hero-title">
+              Good nails.<em>Great energy.</em>
+            </h1>
+            <div className="edit-intro">
+              <Asterisk aria-hidden="true" />
+              <p>
+                A fresh set. A new mood.
+                <br />A little time that’s all yours.
+              </p>
+              <span>MADISON HILL NAILS</span>
+            </div>
+          </div>
+          <div className="edit-campaign">
+            <div className="campaign-image">
+              <div className="image-plane" data-depth="130">
+                <Image
+                  src="/images/editorial-cherry.png"
+                  alt="Editorial inspiration: glossy cherry red nails against mint satin"
+                  fill
+                  preload
+                  sizes="(max-width: 760px) 100vw, 82vw"
+                />
+              </div>
+              <span className="campaign-index">COLOR STUDY — 001</span>
+            </div>
+            <div className="campaign-note">
+              <span>
+                NAILS AS A<br />
+                FORM OF
+                <br />
+                <em>self-expression.</em>
+              </span>
+              <ArrowDown size={24} aria-hidden="true" />
+            </div>
+            <div className="floating-print" data-depth="-95">
+              <figure>
+                <div className="print-image">
+                  <Image
+                    src="/images/editorial-butter.png"
+                    alt="Editorial inspiration: butter yellow nails with a red sphere"
+                    fill
+                    sizes="(max-width: 760px) 30vw, 20vw"
+                  />
+                </div>
+                <figcaption>A LITTLE UNEXPECTED. VERY YOU.</figcaption>
+              </figure>
+            </div>
+            <Link className="booking-orbit" href="/book">
+              <ArrowUpRight size={38} />
+              <span>
+                BOOK YOUR
+                <br />
+                NEXT MOOD
+              </span>
             </Link>
           </div>
-          <div className="hero-location">
-            <MapPin size={16} /> 349 Main St · Madison, New Jersey
-          </div>
-        </div>
-        <div className="hero-art">
-          <Parallax>
-            <Image
-              src="/images/color-study.png"
-              alt="Cherry red and lilac nail polish in a colorful decorative still life"
-              fill
-              priority
-              sizes="(max-width: 760px) 100vw, 48vw"
-            />
-          </Parallax>
-          <div className="round-sticker">
-            <Flower2 size={33} strokeWidth={1.4} />
+          <div className="campaign-bottom">
             <span>
-              GOOD COLOR.
-              <br />
-              GOOD MOOD.
+              <MapPin size={13} /> 349 MAIN ST · MADISON, NJ
             </span>
+            <span>CREATIVE IMAGERY · NAIL INSPIRATION</span>
+            <a href="#ritual">
+              SCROLL TO EXPLORE <ArrowDown size={14} />
+            </a>
           </div>
-          <span className="image-caption">A LITTLE COLOR INSPIRATION</span>
-        </div>
-      </section>
-      <div className="ribbon" aria-hidden="true">
-        <span>A LITTLE POLISH</span>
-        <Flower2 />
-        <span>A LITTLE PAUSE</span>
-        <Flower2 />
-        <span>A WHOLE LOT OF YOU</span>
-        <Flower2 />
-        <span>A LITTLE POLISH</span>
-      </div>
-      <section id="services" className="section wrap">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">01 / THE MENU</span>
+        </section>
+        <section id="ritual" className="edit-manifesto edit-wrap">
+          <span className="edit-label">A SMALL RITUAL. A BIG FEELING.</span>
+          <h2>
+            For the everyday.
+            <br />
+            For the <em>why not.</em>
+            <br />
+            For <span className="outlined-word">you.</span>
+            <Asterisk aria-hidden="true" />
+          </h2>
+          <div className="manifesto-foot">
+            <span>01 — MAKE TIME</span>
+            <p>
+              Some things are worth slowing down for. A color you love. A moment
+              to reset. That fresh-nails feeling, long after you leave.
+            </p>
+            <Link href="/book" className="edit-text-link">
+              Find your next appointment <ArrowUpRight size={22} />
+            </Link>
+          </div>
+        </section>
+        <section id="services" className="edit-menu edit-wrap">
+          <div className="edit-section-head">
+            <span className="edit-label">THE APPOINTMENT EDIT</span>
             <h2>
-              Make room for
+              A little time.
               <br />
-              <em>a little ritual.</em>
+              <em>Your kind of care.</em>
             </h2>
           </div>
-          <p>
-            From your everyday look to your next special occasion, your
-            appointment starts here.
-          </p>
-        </div>
-        {menu?.services.length ? (
-          <div className="service-grid">
-            {menu.services.map((s, i) => (
-              <article className={`service-card tone-${i % 3}`} key={s.id}>
-                <span className="eyebrow">{s.category}</span>
-                <h3>{s.name}</h3>
-                <p>{s.description}</p>
-                <div className="service-meta">
-                  <span>
-                    {s.duration_minutes} min · {money(s.price_cents)}
-                  </span>
-                  <Link
-                    href={`/book?service=${s.id}`}
-                    aria-label={`Book ${s.name}`}
-                  >
-                    <ArrowUpRight />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <div className="service-grid">
-            <article className="service-card tone-0">
-              <Flower2 size={36} />
-              <h3>The everyday reset.</h3>
-              <p>
-                Make a little room in your routine for nail care and a fresh
-                perspective.
-              </p>
-              <span className="card-number">01</span>
-            </article>
-            <article className="service-card tone-1">
-              <Sparkles size={36} />
-              <h3>A reason to dress up.</h3>
-              <p>
-                A celebration on the calendar? Bring your ideas for your next
-                appointment.
-              </p>
-              <span className="card-number">02</span>
-            </article>
-            <article className="service-card tone-2">
-              <Heart size={36} />
-              <h3>Something just for you.</h3>
-              <p>
-                That color you keep thinking about. That time you’ve been
-                meaning to take.
-              </p>
-              <span className="card-number">03</span>
-            </article>
-          </div>
-        )}
-        {!menu?.services.length && (
-          <p className="menu-note">
-            Our online service menu is getting its finishing touches. Visit the
-            salon for current services, pricing, and availability.
-          </p>
-        )}
-      </section>
-      <section id="color" className="color-section">
-        <div className="wrap">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">02 / THE COLOR STORY</span>
-              <h2>
-                Life’s too colorful
-                <br />
-                for <em>one shade.</em>
-              </h2>
+          <div className="edit-menu-layout">
+            <div className="menu-aside">
+              <span className="edit-label">02 — THE MENU</span>
+              <p>Your next appointment starts with a little inspiration.</p>
+              <Link className="button" href="/book">
+                Explore appointments <ArrowUpRight size={18} />
+              </Link>
             </div>
+            <div className="menu-rows">
+              {menu?.services.length ? (
+                menu.services.map((service, i) => (
+                  <article className="edit-service" key={service.id}>
+                    <span className="service-index">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <span className="service-category">
+                        {service.category}
+                      </span>
+                      <h3>{service.name}</h3>
+                      <p>{service.description}</p>
+                      <span className="service-price">
+                        {service.duration_minutes} min ·{" "}
+                        {money(service.price_cents)}
+                      </span>
+                    </div>
+                    <Link
+                      href={`/book?service=${service.id}`}
+                      aria-label={`Book ${service.name}`}
+                      className="service-arrow"
+                    >
+                      <ArrowUpRight />
+                    </Link>
+                  </article>
+                ))
+              ) : (
+                <>
+                  <article className="edit-service">
+                    <span className="service-index">01</span>
+                    <div>
+                      <h3>The everyday.</h3>
+                      <p>A fresh perspective on your usual routine.</p>
+                    </div>
+                    <Asterisk aria-hidden="true" />
+                  </article>
+                  <article className="edit-service">
+                    <span className="service-index">02</span>
+                    <div>
+                      <h3>The occasion.</h3>
+                      <p>A little something for your next big moment.</p>
+                    </div>
+                    <Asterisk aria-hidden="true" />
+                  </article>
+                  <article className="edit-service">
+                    <span className="service-index">03</span>
+                    <div>
+                      <h3>The just because.</h3>
+                      <p>No special reason required.</p>
+                    </div>
+                    <Asterisk aria-hidden="true" />
+                  </article>
+                  <p className="edit-menu-note">
+                    Our online menu is getting its finishing touches. Visit the
+                    salon for current services, pricing, and availability.
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+        </section>
+        <section id="color" className="edit-color" data-scroll-scene>
+          <div className="edit-wrap color-heading">
+            <span className="edit-label">03 — THE COLOR STORY</span>
+            <h2>
+              Life in
+              <br />
+              <em>full color.</em>
+            </h2>
             <p>
-              Feeling bold? Keeping it soft? Play with a little inspiration for
-              your next visit.
+              Follow a feeling.
+              <br />
+              Find your next favorite.
             </p>
           </div>
-          <ColorStudio />
-        </div>
-      </section>
-      <section className="section wrap about-section">
-        <div className="about-symbol" aria-hidden="true">
-          <Flower2 strokeWidth={0.65} />
-          <span>
-            TAKE A BREATH.
-            <br />
-            STAY A LITTLE.
-          </span>
-        </div>
-        <div>
-          <span className="eyebrow">03 / HELLO, MADISON</span>
-          <h2>
-            Your Main Street
-            <br />
-            <em>me-time.</em>
-          </h2>
-          <p>
-            Some days call for a pop of color. Others call for a quiet moment in
-            the middle of it all.
-          </p>
-          <p>
-            Find Madison Hill Nails at 349 Main Street in Madison, New Jersey.
-            Come with a color in mind—or a little room for inspiration.
-          </p>
-          <Link href="#visit" className="text-link">
-            Find your way here <ArrowUpRight size={18} />
+          <div className="color-collage edit-wrap">
+            <div className="color-photo">
+              <div className="image-plane" data-depth="110">
+                <Image
+                  src="/images/editorial-butter.png"
+                  alt="Butter yellow manicure color inspiration on a lilac backdrop"
+                  fill
+                  sizes="(max-width: 760px) 85vw, 40vw"
+                />
+              </div>
+              <span className="photo-label">THE BUTTER YELLOW STUDY</span>
+            </div>
+            <div className="color-caption" data-depth="-65">
+              <span>less ordinary.</span>
+              <em>more you.</em>
+              <Asterisk aria-hidden="true" />
+            </div>
+          </div>
+          <div className="edit-wrap">
+            <ColorStudio />
+            <p className="art-credit">
+              Original creative imagery for inspiration. These images do not
+              represent the salon’s work or available shades.
+            </p>
+          </div>
+        </section>
+        <section className="edit-local edit-wrap" data-scroll-scene>
+          <div className="local-art">
+            <div className="image-plane" data-depth="100">
+              <Image
+                src="/images/editorial-cherry.png"
+                alt="Cherry red nail inspiration with soft satin texture"
+                fill
+                sizes="(max-width: 760px) 100vw, 45vw"
+              />
+            </div>
+            <span className="local-stamp" data-depth="-60">
+              MEET YOU
+              <br />
+              ON MAIN.
+              <ArrowUpRight size={36} />
+            </span>
+          </div>
+          <div className="local-copy">
+            <span className="edit-label">04 — YOUR NEIGHBORHOOD RITUAL</span>
+            <h2>
+              A little pause.
+              <br />
+              <em>
+                Right here
+                <br />
+                in Madison.
+              </em>
+            </h2>
+            <p>
+              Between the errands and the everyday, make a little room for
+              yourself. Find Madison Hill Nails on Main Street, with your next
+              color in mind—or a little room for inspiration.
+            </p>
+            <Link className="edit-text-link" href="#visit">
+              Come on over <ArrowUpRight size={22} />
+            </Link>
+          </div>
+        </section>
+        <section id="visit" className="edit-visit edit-wrap">
+          <div className="visit-heading">
+            <span className="edit-label">YOUR NEXT GOOD NAIL DAY</span>
+            <h2>
+              See you
+              <br />
+              <em>on Main.</em>
+              <ArrowUpRight aria-hidden="true" />
+            </h2>
+          </div>
+          <div className="visit-details">
+            <address>
+              Madison Hill Nails
+              <br />
+              349 Main St
+              <br />
+              Madison, NJ 07940
+            </address>
+            <p>
+              Visit the salon for current opening hours and walk-in
+              availability.
+            </p>
+            <a
+              className="edit-text-link"
+              href="https://www.google.com/maps/search/?api=1&query=Madison+Hill+Nails+349+Main+St+Madison+NJ+07940"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Get directions <ArrowUpRight size={20} />
+              <span className="sr-only"> (opens a new tab)</span>
+            </a>
+          </div>
+          <div className="faq">
+            <span className="edit-label">A FEW GOOD THINGS TO KNOW</span>
+            <h3>Before your visit.</h3>
+            <details>
+              <summary>How do I book an appointment?</summary>
+              <p>
+                Use our booking page to see whether online appointments are
+                open. When available, choose a service and time, sign in with a
+                verified email, and confirm your appointment.
+              </p>
+            </details>
+            <details>
+              <summary>Can I change my appointment?</summary>
+              <p>
+                Sign in to My appointments to reschedule or cancel. Changes
+                close to your visit may require staff assistance; the booking
+                policy shows the current cutoff.
+              </p>
+            </details>
+            <details>
+              <summary>Do I need to enter a credit card?</summary>
+              <p>
+                No. This website does not collect payment or credit-card
+                details.
+              </p>
+            </details>
+          </div>
+        </section>
+        <div className="mobile-book">
+          <Link className="button" href="/book">
+            Book your next mood <ArrowUpRight size={18} />
           </Link>
         </div>
-      </section>
-      <section id="visit" className="section wrap visit-section">
-        <div className="visit-card">
-          <span className="eyebrow">04 / COME ON OVER</span>
-          <h2>
-            A little closer
-            <br />
-            to <em>your next color.</em>
-          </h2>
-          <address>
-            349 Main St
-            <br />
-            Madison, NJ 07940
-          </address>
-          <p>
-            Visit the salon for current opening hours and walk-in availability.
-          </p>
-          <a
-            className="button"
-            href="https://www.google.com/maps/search/?api=1&query=Madison+Hill+Nails+349+Main+St+Madison+NJ+07940"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Get directions <ArrowUpRight size={18} />
-            <span className="sr-only"> (opens a new tab)</span>
-          </a>
-        </div>
-        <div className="faq">
-          <span className="eyebrow">GOOD TO KNOW</span>
-          <h3>Before you stop by.</h3>
-          <details>
-            <summary>How do I book an appointment?</summary>
-            <p>
-              Use our booking page to see whether online appointments are open.
-              When available, choose a service and time, sign in with a verified
-              email, and confirm your appointment.
-            </p>
-          </details>
-          <details>
-            <summary>Can I change my appointment?</summary>
-            <p>
-              Sign in to My appointments to reschedule or cancel. Changes close
-              to your visit may require staff assistance; the booking policy
-              shows the current cutoff.
-            </p>
-          </details>
-          <details>
-            <summary>Do I need to enter a credit card?</summary>
-            <p>
-              No. This website does not collect payment or credit-card details.
-            </p>
-          </details>
-          <details>
-            <summary>Where are you located?</summary>
-            <p>
-              Madison Hill Nails is at 349 Main St, Madison, NJ 07940. Use the
-              directions link to plan your visit.
-            </p>
-          </details>
-        </div>
-      </section>
-      <div className="mobile-book">
-        <Link className="button" href="/book">
-          Book a little me-time <ArrowUpRight size={18} />
-        </Link>
-      </div>
+      </EditorialMotion>
     </main>
   );
 }
