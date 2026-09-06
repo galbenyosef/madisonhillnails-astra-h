@@ -13,6 +13,8 @@ export default async function Home() {
     "@context": "https://schema.org",
     "@type": "NailSalon",
     name: "Madison Hill Nails",
+    description:
+      "Nail care, pedicures, and spa treatments in Madison, New Jersey.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "349 Main St",
@@ -46,7 +48,7 @@ export default async function Home() {
             <div className="edit-intro">
               <Asterisk aria-hidden="true" />
               <p>
-                A fresh set. A new mood.
+                Nail care. Pedicures. Spa time.
                 <br />A little time that’s all yours.
               </p>
               <span>MADISON HILL NAILS</span>
@@ -139,7 +141,10 @@ export default async function Home() {
           <div className="edit-menu-layout">
             <div className="menu-aside">
               <span className="edit-label">02 — THE MENU</span>
-              <p>Your next appointment starts with a little inspiration.</p>
+              <p>
+                Nail care, pedicures, and spa treatments. A little time for
+                every part of you.
+              </p>
               <Link className="button" href="/book">
                 Explore appointments <ArrowUpRight size={18} />
               </Link>
@@ -176,24 +181,26 @@ export default async function Home() {
                   <article className="edit-service">
                     <span className="service-index">01</span>
                     <div>
-                      <h3>The everyday.</h3>
-                      <p>A fresh perspective on your usual routine.</p>
+                      <h3>Nail care.</h3>
+                      <p>A fresh color. A little self-expression.</p>
                     </div>
                     <Asterisk aria-hidden="true" />
                   </article>
                   <article className="edit-service">
                     <span className="service-index">02</span>
                     <div>
-                      <h3>The occasion.</h3>
-                      <p>A little something for your next big moment.</p>
+                      <h3>Pedicures.</h3>
+                      <p>A little care for your feet—and time for yourself.</p>
                     </div>
                     <Asterisk aria-hidden="true" />
                   </article>
                   <article className="edit-service">
                     <span className="service-index">03</span>
                     <div>
-                      <h3>The just because.</h3>
-                      <p>No special reason required.</p>
+                      <h3>Spa treatments.</h3>
+                      <p>
+                        Make space to unwind. Ask us about our current spa menu.
+                      </p>
                     </div>
                     <Asterisk aria-hidden="true" />
                   </article>
@@ -276,8 +283,9 @@ export default async function Home() {
             </h2>
             <p>
               Between the errands and the everyday, make a little room for
-              yourself. Find Madison Hill Nails on Main Street, with your next
-              color in mind—or a little room for inspiration.
+              yourself. From nail care and pedicures to spa treatments, find
+              your next moment of relaxation at Madison Hill Nails on Main
+              Street.
             </p>
             <Link className="edit-text-link" href="#visit">
               Come on over <ArrowUpRight size={22} />

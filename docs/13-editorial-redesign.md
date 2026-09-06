@@ -7,7 +7,7 @@ The owner rejected the first visual direction, asked whether it included paralla
 - White page with cherry red typography, mint photography, a lilac color section, and acid-yellow accents. Oversized sans-serif headlines alternate with italic serif lettering; the new opening reads “Good nails. Great energy.”
 - Large manicure campaign image with an overlapping rotated detail print and circular booking link. The service section uses open typographic rows, followed by a photographic color collage, interactive polish samples, Main Street introduction, address/directions, and FAQ.
 - Header and footer match the new visual identity; booking, authentication, staff permissions, scheduling logic, service data, and fee/SMS exclusions retain the approved scope.
-- The real service catalog renders when configured. Without it, the page uses clearly described inspiration and an unavailable-menu notice, with no invented prices, treatments, hours, ratings, or customer reviews.
+- The real service catalog renders when configured. Without it, the page shows the owner-confirmed categories of nail care, pedicures, and spa treatments, with a notice that the detailed online menu is still being prepared. No prices, durations, specific spa treatment names, hours, ratings, or customer reviews are invented.
 - NailSalon structured data, canonical configuration, private-page noindex, preview noindex, semantic headings, image alternatives, keyboard access, and navigation remain in place. No search ranking or design award is claimed.
 
 ## Scrolling behavior

@@ -7,18 +7,19 @@ const origin = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(origin),
   title: {
-    default: "Madison Hill Nails | Nail Salon in Madison, NJ",
+    default: "Madison Hill Nails | Pedicures & Spa in Madison, NJ",
     template: "%s | Madison Hill Nails",
   },
   description:
-    "A little color. A little time for you. Visit Madison Hill Nails at 349 Main St in Madison, New Jersey, and plan your next nail appointment.",
+    "Nail care, pedicures, and spa treatments at Madison Hill Nails. Find your next moment of relaxation at 349 Main St in Madison, NJ.",
   robots: {
     index: process.env.SITE_INDEXABLE === "true",
     follow: process.env.SITE_INDEXABLE === "true",
   },
   openGraph: {
     title: "Madison Hill Nails",
-    description: "Good nails. Great energy. Nail care in Madison, New Jersey.",
+    description:
+      "Nail care, pedicures, and spa treatments. A little time for you in Madison, New Jersey.",
     type: "website",
     locale: "en_US",
     images: [
