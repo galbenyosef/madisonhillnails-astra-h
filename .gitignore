@@ -1,0 +1,51 @@
+# Environment files are always local, including example/template variants.
+.env*
+*.env
+*.env.*
+.envrc
+
+# Credentials, private keys, and local authentication state.
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.kdbx
+*.mobileprovision
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+.ssh/
+.aws/
+.azure/
+.config/gh/
+.netrc
+.npmrc
+.pypirc
+.git-credentials
+credentials
+credentials.*
+credentials-*.json
+service-account*.json
+*serviceAccount*.json
+kubeconfig
+secrets/
+secrets.*
+*.tfstate
+*.tfstate.*
+# Do not hide secret findings through per-finding exclusions.
+.gitleaksignore
+
+# Generated/local files can contain configuration or sensitive output.
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+.vercel/
+.expo/
+*.log
+.DS_Store

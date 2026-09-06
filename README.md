@@ -22,6 +22,7 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 - Obtain explicit approval before implementation, purchases, account setup, or deployment.
 - Document decisions, assumptions, costs, checks, and changes in this repository.
 - Keep credentials and customer data out of GitHub.
+- Follow [the secret-protection setup and checks](SECURITY.md); activate the repository hooks on every clone.
 
 ## Immediate dependencies
 
