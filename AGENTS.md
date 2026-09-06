@@ -1,6 +1,6 @@
 # Repository working rules
 
-- This project is in planning only. Ask the owner before beginning a new phase; do not implement the salon website without approval.
+- The owner authorized MVP implementation. Follow the current scope in [docs/10-approved-build-scope.md](docs/10-approved-build-scope.md): custom booking/admin, Better Auth for customers/staff, Supabase PostgreSQL on Free only, verified accounts, and no card collection or automatic fees in the first release. All services must remain $0; SMS verification is deferred. Do not enable billing, paid upgrades, or chargeable overages. Ask before production deployment, paid services, or a new phase outside this build.
 - Never commit or push environment files, credentials, passwords, API secrets, private keys, customer data, or authentication state. This includes `.env` example/template files; document variable names with empty placeholders in Markdown instead.
 - Read [SECURITY.md](SECURITY.md) before committing or pushing. Keep hooks active and run the staged/history checks. Never bypass a failed check with `--no-verify`, force-add ignored files, disable scanning, or add secret allowlists to make a push succeed.
 - Keep real configuration in local ignored files or approved deployment secret storage. Never put secrets in browser-exposed variables such as `NEXT_PUBLIC_*`, logs, screenshots, documentation, or tool output.

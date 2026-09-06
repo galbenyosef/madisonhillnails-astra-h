@@ -1,8 +1,8 @@
 # Madison Hill Nails
 
-Planning repository for a colorful, mobile-friendly nail salon website with online scheduling and a future companion app.
+Project repository for a colorful, mobile-friendly nail salon website with online scheduling and a future companion app.
 
-**Status:** planning only, September 6, 2026. No website, application, infrastructure, booking account, or deployment has been built. Technical choices and feature details below are proposals for owner review.
+**Status:** MVP implementation authorized; initial local scaffolding started, September 6, 2026. The application is not yet functional or deployed. No live database, SMS service, or paid subscription has been provisioned. [Current approved scope and cost constraints](docs/10-approved-build-scope.md) supersede conflicting earlier proposals, including saved cards, guest booking, and Supabase Auth.
 
 **GitHub delivery:** planning documents are published on [GitHub, branch main](https://github.com/zdmediacom/madisonhillnails-astra-h/tree/main). The initial authentication blocker was resolved through an owner-authorized GitHub CLI browser sign-in. Remote publication was verified against the local commit.
 
@@ -17,12 +17,13 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 7. [Desktop/mobile wireframes, draft copy, and content checklist](docs/07-wireframes-and-content.md)
 8. [Custom admin dashboard and payment/cancellation controls](docs/08-admin-and-payment-controls.md)
 9. [Architecture recommendation and prioritized MVP backlog](docs/09-architecture-and-mvp-backlog.md)
+10. [Current approved build scope, $0 services, and deferred SMS](docs/10-approved-build-scope.md)
 
 ## Working agreement
 
 - Ask before starting a new phase or taking actions outside the approved scope.
-- Current authorization: research, prepare planning documents, and push them to the user's GitHub destination once identified.
-- Obtain explicit approval before implementation, purchases, account setup, or deployment.
+- Current authorization: build the MVP, document decisions and changes, and push reviewed work to the owner's GitHub repository.
+- Obtain explicit approval before purchases, external account setup, production deployment, or work outside the approved scope. Supabase is approved only on its Free plan; no automatic paid upgrade is authorized.
 - Document decisions, assumptions, costs, checks, and changes in this repository.
 - Keep credentials and customer data out of GitHub.
 - Follow [the secret-protection setup and checks](SECURITY.md); activate the repository hooks on every clone.
@@ -32,8 +33,9 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 - Owner-confirmed address: **349 Main St, Madison, NJ 07940**. The initial street-number discrepancy is resolved; phone, hours, and official profiles still need confirmation.
 - GitHub destination: [zdmediacom/madisonhillnails-astra-h](https://github.com/zdmediacom/madisonhillnails-astra-h), branch `main`. Commit author: Leo, using the account's ID-based GitHub noreply email. Git history records committed deliveries; verify remote publication for each push.
 - Current scheduling is manual. Plan a staff-assisted move to one digital calendar; confirm the service menu, staffing, and official social profiles.
-- Hosting: Netlify, selected by the owner; low traffic expected. Budget is undecided, so show hosting and scheduling costs separately before any purchase.
+- Hosting: Netlify, selected by the owner; low traffic expected. Supabase PostgreSQL is approved only on Free, with Better Auth running in our application. All services must remain $0; do not activate paid upgrades or chargeable overages. Email delivery must fit a verified free allowance.
 - MVP includes a custom website admin dashboard to add, modify, and cancel appointments against the same schedule used online.
-- Saved-card requirements and late-cancellation fees will be built in MVP but disabled initially. When enabled, customers save a card with no upfront charge. Fee amounts, exact cutoff, and enforcement rules still need confirmation before implementation of those details and activation.
+- No card collection, Stripe integration, or automatic cancellation charges in the first release. This supersedes the earlier requirement to build disabled fee controls.
+- Require customer login and verified email for online booking. The owner deferred SMS verification to keep all services at $0. Collecting a contact phone number does not make it verified. SMS verification and SMS reminders are future work requiring separate approval.
 
-The documentation is a reviewable proposal. Decisions marked pending must not be treated as approved requirements or verified business facts.
+Earlier planning documents retain proposal history. Use the current scope document for accepted changes. Decisions marked pending must not be treated as approved requirements or verified business facts.
