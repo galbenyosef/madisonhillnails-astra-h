@@ -28,7 +28,7 @@ Document each service's free quota and what happens when it is exhausted before 
 
 ## Implementation status and launch dependencies
 
-Initial local framework scaffolding exists; booking, authentication, admin, database migrations, and notifications are not yet complete or validated. The current local scaffold still contains the earlier Supabase Auth integration and must be revised before it represents the accepted architecture. No live database, email/SMS delivery, or production deployment has been configured.
+The first implementation now includes the website, Better Auth integration, customer/admin booking flows, PostgreSQL migration, and email jobs. Local backend and browser checks are recorded in [validation results](12-validation.md); configuration and operating instructions are in [the build guide](11-build-and-operations.md). The earlier Supabase Auth integration has been removed. No live database, email/SMS delivery, or production deployment has been configured.
 
 Remaining dependencies include authorized free service account setup, database/email configuration, actual service prices and durations, staff capacity and hours, cancellation rules, verified business contact/profile links, and owner-approved photography/content. Public content must not invent operating facts or customer reviews. Online booking must remain unavailable until the real schedule and required email verification delivery are configured.
 

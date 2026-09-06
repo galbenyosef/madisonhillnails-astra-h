@@ -1,5 +1,7 @@
 # Product plan
 
+> Historical planning proposal. The [current approved scope](10-approved-build-scope.md) and [implemented build](11-build-and-operations.md) supersede conflicting scope, authentication, payment, and cost assumptions below.
+
 Date: September 6, 2026. Status: proposed MVP, awaiting scope approval.
 
 ## Purpose and audience

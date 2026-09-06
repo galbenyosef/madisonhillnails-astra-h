@@ -1,5 +1,7 @@
 # Architecture recommendation and MVP backlog
 
+> Historical planning proposal. The [current approved scope](10-approved-build-scope.md) and [implemented build](11-build-and-operations.md) supersede conflicting scope, authentication, payment, and cost assumptions below.
+
 September 6, 2026. Status: concrete proposal for owner approval, not permission to implement or provision services. The recommendation below follows the confirmed custom admin and saved-card requirements. Existing [product requirements](01-product-plan.md) and [admin/fee requirements](08-admin-and-payment-controls.md) remain the acceptance baseline.
 
 ## Recommended architecture

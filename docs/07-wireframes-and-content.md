@@ -1,5 +1,7 @@
 # Wireframes, content inventory, and booking decisions
 
+> Historical planning proposal. The [current approved scope](10-approved-build-scope.md) and [implemented build](11-build-and-operations.md) supersede conflicting scope, authentication, payment, and cost assumptions below.
+
 Status: planning draft, September 6, 2026. These are structural wireframes and draft copy, not finished visual designs or a website implementation. The owner has not yet approved the scheduler, service menu, operating policies, or budget.
 
 Confirmed since the first draft: manual scheduling, Netlify with low expected traffic, undecided budget, and a custom website admin dashboard. Saved-card and late-cancellation-fee controls are built in MVP but disabled initially; when enabled, save a card with no upfront charge. See the [admin/payment plan](08-admin-and-payment-controls.md) for the expanded scope.

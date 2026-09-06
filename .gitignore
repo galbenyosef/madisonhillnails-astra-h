@@ -48,5 +48,14 @@ coverage/
 .vercel/
 .netlify/
 .expo/
+.cache/
+test-results/
+playwright-report/
+*.tsbuildinfo
+next-env.d.ts
+# Database exports are private, never application source.
+backups/
+*.dump
+*.backup
 *.log
 .DS_Store

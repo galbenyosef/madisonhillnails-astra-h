@@ -1,5 +1,7 @@
 # Technology and scheduling recommendation
 
+> Historical planning proposal. The [current approved scope](10-approved-build-scope.md) and [implemented build](11-build-and-operations.md) supersede conflicting scope, authentication, payment, and cost assumptions below.
+
 Researched September 6, 2026. Owner decisions: Netlify hosting, custom website admin, and payment/late-cancellation-fee controls built in MVP but disabled initially. Other technology/provider selections remain proposals; verify vendor plans again before purchase or implementation. Scheduling is currently manual and the budget is undecided.
 
 ## Recommended starting stack

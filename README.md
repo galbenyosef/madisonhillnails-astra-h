@@ -2,9 +2,20 @@
 
 Project repository for a colorful, mobile-friendly nail salon website with online scheduling and a future companion app.
 
-**Status:** MVP implementation authorized; initial local scaffolding started, September 6, 2026. The application is not yet functional or deployed. No live database, SMS service, or paid subscription has been provisioned. [Current approved scope and cost constraints](docs/10-approved-build-scope.md) supersede conflicting earlier proposals, including saved cards, guest booking, and Supabase Auth.
+**Status:** first MVP implementation built and locally tested, September 6, 2026. Includes the public website, authenticated customer booking, and custom staff dashboard. Live database/email setup and salon operating data are still required before accepting bookings. No hosted service, paid subscription, or production deployment has been provisioned. [Current approved scope and cost constraints](docs/10-approved-build-scope.md) supersede conflicting earlier proposals, including saved cards, guest booking, and Supabase Auth.
 
-**GitHub delivery:** planning documents are published on [GitHub, branch main](https://github.com/zdmediacom/madisonhillnails-astra-h/tree/main). The initial authentication blocker was resolved through an owner-authorized GitHub CLI browser sign-in. Remote publication was verified against the local commit.
+**GitHub delivery:** source and documentation belong on [GitHub, branch main](https://github.com/zdmediacom/madisonhillnails-astra-h/tree/main). Active commit/push hooks scan for secrets; environment files and customer data are excluded. Each push is verified against the remote commit.
+
+## Run the website
+
+Use Node 24, then:
+
+```sh
+npm ci
+npm run dev
+```
+
+Open `http://localhost:3000`. The public site works without credentials; online accounts and booking remain unavailable until configured. Read [build/setup instructions](docs/11-build-and-operations.md) and [validation results](docs/12-validation.md) before enabling live booking.
 
 ## Read the plan
 
@@ -18,6 +29,8 @@ Project repository for a colorful, mobile-friendly nail salon website with onlin
 8. [Custom admin dashboard and payment/cancellation controls](docs/08-admin-and-payment-controls.md)
 9. [Architecture recommendation and prioritized MVP backlog](docs/09-architecture-and-mvp-backlog.md)
 10. [Current approved build scope, $0 services, and deferred SMS](docs/10-approved-build-scope.md)
+11. [Implementation, private configuration, free services, and operations](docs/11-build-and-operations.md)
+12. [Validation results and remaining launch checks](docs/12-validation.md)
 
 ## Working agreement
 

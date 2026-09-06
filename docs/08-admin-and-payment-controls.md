@@ -1,5 +1,7 @@
 # Appointment administration and payment controls
 
+> Historical planning proposal. The [current approved scope](10-approved-build-scope.md) and [implemented build](11-build-and-operations.md) supersede conflicting scope, authentication, payment, and cost assumptions below.
+
 Planning revision, September 6, 2026. Owner-confirmed MVP: a custom website admin dashboard plus saved-card and late-cancellation-fee controls, built but disabled initially. When enabled, customers save a card without an upfront charge. This supersedes the earlier deferred-payment implementation plan. No dashboard, payment integration, account, or live fee has been created or enabled; the project remains in planning.
 
 ## Admin area requirements

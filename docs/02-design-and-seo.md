@@ -1,5 +1,7 @@
 # Design direction and SEO
 
+> Historical planning proposal. The [current approved scope](10-approved-build-scope.md) and [implemented build](11-build-and-operations.md) supersede conflicting scope, authentication, payment, and cost assumptions below.
+
 Status: proposal. [Structural desktop/mobile wireframes and draft content](07-wireframes-and-content.md) are available for planning review. No finished visual mockups or site implementation have been created.
 
 ## Creative concept: Color, close to home

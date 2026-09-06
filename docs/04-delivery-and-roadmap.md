@@ -1,5 +1,7 @@
 # Delivery and roadmap
 
+> Historical planning proposal. The [current approved scope](10-approved-build-scope.md) and [implemented build](11-build-and-operations.md) supersede conflicting scope, authentication, payment, and cost assumptions below.
+
 Status: sequencing proposal, not authorization to build or a delivery-date commitment.
 
 The [architecture and prioritized backlog](09-architecture-and-mvp-backlog.md) expands these phases into implementation work packages, including the custom-scheduling recommendation's data, notification, and operational responsibilities. Architecture remains pending approval.
