@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowDown, ArrowUpRight, Asterisk, MapPin } from "lucide-react";
 import { ColorStudio } from "@/components/color-studio";
-import { EditorialMotion } from "@/components/editorial-motion";
 import { catalog } from "@/lib/data";
 import { money } from "@/lib/format";
 export const dynamic = "force-dynamic";
@@ -35,12 +34,14 @@ export default async function Home() {
           __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
         }}
       />
-      <EditorialMotion>
-        <section
-          className="edit-hero edit-wrap"
-          aria-labelledby="hero-title"
-          data-scroll-scene
-        >
+      <div className="editorial-home">
+        <div className="edit-topline edit-wrap">
+          <span>
+            THE NAIL &amp; SPA EDIT <span className="topline-dot">/</span>{" "}
+            MADISON, NEW JERSEY
+          </span>
+        </div>
+        <section className="edit-hero edit-wrap" aria-labelledby="hero-title">
           <div className="edit-title-row">
             <h1 id="hero-title">
               Good nails.<em>Great energy.</em>
@@ -56,7 +57,7 @@ export default async function Home() {
           </div>
           <div className="edit-campaign">
             <div className="campaign-image">
-              <div className="image-plane" data-depth="130">
+              <div className="image-plane">
                 <Image
                   src="/images/editorial-cherry.png"
                   alt="Editorial inspiration: glossy cherry red nails against mint satin"
@@ -76,7 +77,7 @@ export default async function Home() {
               </span>
               <ArrowDown size={24} aria-hidden="true" />
             </div>
-            <div className="floating-print" data-depth="-95">
+            <div className="floating-print">
               <figure>
                 <div className="print-image">
                   <Image
@@ -213,7 +214,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <section id="color" className="edit-color" data-scroll-scene>
+        <section id="color" className="edit-color">
           <div className="edit-wrap color-heading">
             <span className="edit-label">03 — THE COLOR STORY</span>
             <h2>
@@ -229,7 +230,7 @@ export default async function Home() {
           </div>
           <div className="color-collage edit-wrap">
             <div className="color-photo">
-              <div className="image-plane" data-depth="110">
+              <div className="image-plane">
                 <Image
                   src="/images/editorial-butter.png"
                   alt="Butter yellow manicure color inspiration on a lilac backdrop"
@@ -239,7 +240,7 @@ export default async function Home() {
               </div>
               <span className="photo-label">THE BUTTER YELLOW STUDY</span>
             </div>
-            <div className="color-caption" data-depth="-65">
+            <div className="color-caption">
               <span>less ordinary.</span>
               <em>more you.</em>
               <Asterisk aria-hidden="true" />
@@ -253,9 +254,9 @@ export default async function Home() {
             </p>
           </div>
         </section>
-        <section className="edit-local edit-wrap" data-scroll-scene>
+        <section className="edit-local edit-wrap">
           <div className="local-art">
-            <div className="image-plane" data-depth="100">
+            <div className="image-plane">
               <Image
                 src="/images/editorial-cherry.png"
                 alt="Cherry red nail inspiration with soft satin texture"
@@ -263,7 +264,7 @@ export default async function Home() {
                 sizes="(max-width: 760px) 100vw, 45vw"
               />
             </div>
-            <span className="local-stamp" data-depth="-60">
+            <span className="local-stamp">
               MEET YOU
               <br />
               ON MAIN.
@@ -357,7 +358,7 @@ export default async function Home() {
             Book your next mood <ArrowUpRight size={18} />
           </Link>
         </div>
-      </EditorialMotion>
+      </div>
     </main>
   );
 }

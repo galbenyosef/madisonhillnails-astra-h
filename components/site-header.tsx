@@ -2,12 +2,17 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { BrandMark } from "@/components/brand-mark";
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="site-header editorial-header">
-      <Link href="/" className="wordmark" aria-label="Madison Hill Nails home">
-        madison hill<span>NAILS · MADISON, NJ</span>
+      <Link
+        href="/"
+        className="brandmark"
+        aria-label="Madison Hill Nails & Spa home"
+      >
+        <BrandMark />
       </Link>
       <button
         className="menu-toggle icon-button"

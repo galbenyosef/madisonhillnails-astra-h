@@ -36,20 +36,7 @@
   min-height: 92px;
   border-color: #d8d7d0;
 }
-.editorial-header .wordmark {
-  font:
-    800 29px/0.88 Arial,
-    Helvetica,
-    sans-serif;
-  letter-spacing: -1.9px;
-  color: #b52b23;
-}
-.editorial-header .wordmark span {
-  text-align: left;
-  letter-spacing: 4.5px;
-  font-size: 8px;
-  margin-top: 11px;
-}
+
 .editorial-header .button {
   background: #b52b23;
   border-radius: 0;
@@ -78,16 +65,7 @@
   margin-inline: 15px;
   color: #b52b23;
 }
-.motion-control {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  padding: 10px 0 10px 12px;
-  font-size: 10px;
-  letter-spacing: 0.2px;
-  background: none;
-  border: 0;
-}
+
 .edit-title-row {
   position: relative;
   padding-block: 12px 34px;
@@ -149,9 +127,7 @@
 .image-plane img {
   object-fit: cover;
 }
-[data-depth] {
-  transform: translate3d(0, var(--depth-y, 0px), 0);
-}
+
 .campaign-image img {
   object-position: 57% center;
 }
@@ -692,20 +668,7 @@
 .editorial-footer .footer-bottom small {
   color: #fff;
 }
-.editorial-footer .wordmark {
-  font:
-    700 26px/1 Arial,
-    sans-serif;
-  letter-spacing: -1.4px;
-}
-.editorial-footer .wordmark span {
-  font-size: 8px;
-  text-align: left;
-  letter-spacing: 2px;
-}
-.editorial-home[data-motion="still"] [data-depth] {
-  transform: none;
-}
+
 @media (min-width: 761px) and (max-width: 1100px) {
   .edit-wrap {
     width: calc(100% - 64px);
@@ -746,16 +709,9 @@
     min-height: 77px;
     padding: 18px 20px;
   }
-  .editorial-header .wordmark {
-    font-size: 25px;
-  }
-  .editorial-header .wordmark span {
-    font-size: 7px;
-    letter-spacing: 3.8px;
-    margin-top: 8px;
-  }
+
   .editorial-header .navigation {
-    top: 76px;
+    top: 100%;
   }
   .edit-topline {
     padding-top: 16px;
@@ -767,11 +723,7 @@
   .topline-dot {
     margin-inline: 6px;
   }
-  .motion-control {
-    font-size: 8px;
-    white-space: nowrap;
-    padding: 10px 0;
-  }
+
   .edit-title-row {
     padding-block: 5px 22px;
   }
@@ -1109,13 +1061,30 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .editorial-home [data-depth] {
-    transform: none !important;
-  }
-  .motion-control {
-    display: none;
-  }
   .booking-orbit:hover {
     rotate: none;
+  }
+}
+
+/* Owner-requested black, equal-width NAILS & SPA wordmark. */
+.brandmark {
+  display: block;
+  width: 190px;
+  flex-shrink: 0;
+  line-height: 0;
+}
+.brandmark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.editorial-footer .brandmark {
+  box-sizing: content-box;
+  background: white;
+  padding: 12px;
+}
+@media (max-width: 760px) {
+  .brandmark {
+    width: 160px;
   }
 }

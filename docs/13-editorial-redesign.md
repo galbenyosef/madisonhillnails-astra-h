@@ -10,13 +10,13 @@ The owner rejected the first visual direction, asked whether it included paralla
 - The real service catalog renders when configured. Without it, the page shows the owner-confirmed categories of nail care, pedicures, and spa treatments, with a notice that the detailed online menu is still being prepared. No prices, durations, specific spa treatment names, hours, ratings, or customer reviews are invented.
 - NailSalon structured data, canonical configuration, private-page noindex, preview noindex, semantic headings, image alternatives, keyboard access, and navigation remain in place. No search ranking or design award is claimed.
 
-## Scrolling behavior
+## Current wordmark and scrolling behavior
 
-`components/editorial-motion.tsx` drives decorative layers in three scenes: hero collage, color story, and local introduction. Images and foreground lettering/prints move at different speeds and in opposite directions based on each section's viewport position. Maximum configured offsets are 130 pixels in either direction; actual displacement depends on viewport progress. Mobile offsets are halved.
+The owner subsequently rejected the parallax design and requested a black “madison hill” wordmark with “NAILS & SPA” spanning the same width below. The current page removes the parallax controller, scroll listeners, depth transforms, and pause control. Images and lettering remain stationary while the page scrolls normally. Interactive shade selection and navigation remain available; reduced-motion preferences still disable smooth scrolling and hover transitions.
 
-Native scrolling is preserved: no scroll hijacking, forced horizontal scrolling, pinned reading sequence, or additional animation library. A single passive scroll listener batches updates into `requestAnimationFrame`, writing transforms directly without React renders on scroll. Image frames reserve space and crop overscan. Content remains readable without JavaScript.
+`components/brand-mark.tsx` provides one reusable, code-native SVG wordmark for the header and footer. Both text lines use a 220-unit text length so their widths match at desktop and mobile sizes. The main name and subtitle are black. A white backing keeps the footer version legible against its red background. Links retain an accessible “Madison Hill Nails & Spa home” label. This is a presentation change; no legal business-name change is assumed.
 
-The visible Pause motion control stops all parallax and can resume it. The operating system's reduced-motion preference always takes priority, including when changed while the page is open; the redundant motion control is hidden in that mode. Hover transitions also respect reduced motion. Pause state is page-local; no analytics or new storage is introduced.
+The earlier three-scene parallax implementation and its motion tests are preserved in Git history, but are no longer part of the current page.
 
 ## Original artwork and exact prompts
 
@@ -38,8 +38,8 @@ Next/Image serves responsive optimized derivatives. The hero is preloaded; lower
 
 ## Review and validation
 
-Desktop and emulated mobile browser checks cover the homepage, image composition, horizontal overflow, color selection, navigation, protected-route fallback, metadata, structured data, and automated accessibility. A dedicated browser test measures actual transform changes in opposite directions after scrolling and verifies both manual pause/resume and live reduced-motion changes.
+Desktop and emulated mobile browser checks cover the homepage, image composition, horizontal overflow, color selection, navigation, protected-route fallback, metadata, structured data, and automated accessibility. The obsolete parallax test was removed with the controller; the remaining browser suite checks the current static layout and navigation under reduced motion.
 
-Screenshots are generated in ignored `test-results/design-desktop.png`, `design-mobile.png`, `home-desktop.png`, and `home-mobile.png`. These show the local preview; motion is best reviewed in the actual browser at `http://127.0.0.1:3000` while the development server is running.
+Screenshots are generated in ignored `test-results/design-desktop.png`, `design-mobile.png`, `home-desktop.png`, and `home-mobile.png`. Additional `logo-desktop.png` and `logo-mobile.png` captures show the exact wordmark. Review the local website at `http://127.0.0.1:3000` while the development server is running.
 
 Live integration checks and production launch approval from [the validation record](12-validation.md) still apply. This visual revision does not enable booking, deploy to Netlify, create accounts with service providers, or introduce payments or SMS.

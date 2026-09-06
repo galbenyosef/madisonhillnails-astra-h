@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
+import { BrandMark } from "@/components/brand-mark";
 import "./globals.css";
 import "./editorial.css";
 const origin = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -51,8 +52,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
           <div className="footer-bottom">
-            <Link className="wordmark" href="/">
-              madison hill<span>NAILS · MADISON, NJ</span>
+            <Link
+              className="brandmark"
+              href="/"
+              aria-label="Madison Hill Nails & Spa home"
+            >
+              <BrandMark />
             </Link>
             <p>349 Main St, Madison, NJ 07940</p>
             <nav aria-label="Footer">

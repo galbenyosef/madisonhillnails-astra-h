@@ -6,7 +6,7 @@ September 6, 2026. Implementation follows [the approved scope](10-approved-build
 
 | Area | Behavior |
 | --- | --- |
-| Public website | Colorful one-page design, mobile navigation and booking button, reduced-motion-aware decorative parallax, interactive color inspiration, address/directions, FAQ, policies, and privacy notice. |
+| Public website | Colorful one-page design, mobile navigation and booking button, stationary editorial imagery and a black NAILS & SPA wordmark, interactive color inspiration, address/directions, FAQ, policies, and privacy notice. |
 | SEO | Server-rendered public copy, page metadata, canonical links, social preview image, favicon, sitemap, and NailSalon structured data containing the confirmed address. Previews default to noindex; private routes always remain noindex. |
 | Authentication | Better Auth email/password signup and login, email verification, password reset, secure sessions, authenticator enrollment and recovery codes. |
 | Customer appointments | Verified-account booking, qualified technician/time selection, upcoming/history view, rescheduling, cancellation, and account booking restrictions. |
