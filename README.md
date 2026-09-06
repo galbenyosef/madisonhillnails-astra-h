@@ -15,6 +15,7 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 5. [Decisions, open questions, and approval record](docs/05-decisions-and-questions.md)
 6. [Research sources and business fact checks](docs/06-research.md)
 7. [Desktop/mobile wireframes, draft copy, and content checklist](docs/07-wireframes-and-content.md)
+8. [Custom admin dashboard and payment/cancellation controls](docs/08-admin-and-payment-controls.md)
 
 ## Working agreement
 
@@ -31,6 +32,7 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 - GitHub destination: [zdmediacom/madisonhillnails-astra-h](https://github.com/zdmediacom/madisonhillnails-astra-h), branch `main`. Commit author: Leo, using the account's ID-based GitHub noreply email. Git history records committed deliveries; verify remote publication for each push.
 - Current scheduling is manual. Plan a staff-assisted move to one digital calendar; confirm the service menu, staffing, and official social profiles.
 - Hosting: Netlify, selected by the owner; low traffic expected. Budget is undecided, so show hosting and scheduling costs separately before any purchase.
-- MVP appointments require no online payment, deposit, or card hold. Payment options to secure appointments are a future possibility only.
+- MVP includes a custom website admin dashboard to add, modify, and cancel appointments against the same schedule used online.
+- Saved-card requirements and late-cancellation fees will be built in MVP but disabled initially. When enabled, customers save a card with no upfront charge. Fee amounts, exact cutoff, and enforcement rules still need confirmation before implementation of those details and activation.
 
 The documentation is a reviewable proposal. Decisions marked pending must not be treated as approved requirements or verified business facts.

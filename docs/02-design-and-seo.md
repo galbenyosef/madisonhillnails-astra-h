@@ -52,6 +52,7 @@ Target WCAG 2.2 AA: visible keyboard focus, meaningful labels, clear errors, sem
 | `/policies` | Booking, late arrival, cancellation, payment policies | Crawlable, unique content; final indexability set at launch |
 | `/privacy` | Actual data-handling explanation | Public and linked from booking/footer |
 | Provider management URLs / future account routes | Appointment details and changes | Private; no indexing, no customer data in public HTML |
+| `/admin` and admin subroutes | Custom staff calendar, appointment actions, policy/payment settings | Authenticated and authorized; private responses not publicly cached; noindex and exclude from sitemap |
 | Future `/services/...` | Substantive service-specific pages | Indexable after accurate content and demand justify them |
 
 Homepage anchors such as `/#services` are navigation aids, not separate SEO landing pages. One page is suitable for launch, but service pages give future space to explain techniques, pricing, preparation, and aftercare. Avoid thin location/service pages created just for keyword coverage.

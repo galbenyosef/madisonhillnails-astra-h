@@ -22,6 +22,10 @@ Apple Maps details were visible in search results; a subsequent direct open retu
 | --- | --- |
 | [Square Bookings API](https://developer.squareup.com/docs/bookings-api/what-it-is) | Availability and booking lifecycle; buyer/seller permission and paid-plan distinctions |
 | [Square booking operations](https://developer.squareup.com/docs/bookings-api/use-the-api) | Create/manage workflow and availability checks |
+| [Square booking API fee restriction](https://developer.squareup.com/docs/bookings-api/use-the-api) | Services with a non-zero `no_show_fee` cannot be booked through this API; relevant to custom admin/mobile feasibility |
+| [Square cancellation/card policies](https://squareup.com/help/us/en/article/5493-set-a-custom-cancellation-policy-with-square-appointments) | Dashboard policy support does not guarantee custom API fee automation |
+| [Stripe Setup Intents](https://docs.stripe.com/payments/setup-intents) | Candidate saved-card setup without an initial charge; consent and later payment recovery |
+| [Stripe authorization windows](https://docs.stripe.com/payments/place-a-hold-on-a-payment-method) | Temporary bank authorization differs from storing a card for later cancellation fees |
 | [Square hosted booking](https://api.squareup.com/help/us/en/article/5355-set-up-online-booking-with-square-appointments) | Website entry links and booking integration |
 | [Square pricing](https://squareup.com/us/en/appointments/pricing) | Current published plan costs/features; confirm account-specific entitlements |
 | [Acuity developer hub](https://developers.acuityscheduling.com/) | Embeds and API availability |

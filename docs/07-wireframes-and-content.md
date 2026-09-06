@@ -2,7 +2,7 @@
 
 Status: planning draft, September 6, 2026. These are structural wireframes and draft copy, not finished visual designs or a website implementation. The owner has not yet approved the scheduler, service menu, operating policies, or budget.
 
-Confirmed since the first draft: current scheduling is manual; hosting will be Netlify with low expected traffic; budget is undecided; online payments/deposits are excluded from MVP and may be evaluated later.
+Confirmed since the first draft: manual scheduling, Netlify with low expected traffic, undecided budget, and a custom website admin dashboard. Saved-card and late-cancellation-fee controls are built in MVP but disabled initially; when enabled, save a card with no upfront charge. See the [admin/payment plan](08-admin-and-payment-controls.md) for the expanded scope.
 
 Read alongside the [design and SEO direction](02-design-and-seo.md), [MVP requirements](01-product-plan.md), and [technology comparison](03-technology-and-booking.md).
 
@@ -190,7 +190,7 @@ For hosted scheduling, the provider controls the exact screens. The following de
 | Technician | Any eligible technician or named choice, if approved | Only staff who can perform the service are offered |
 | Date/time | Available times and salon-local timezone | Account for service duration, buffers, staff calendar, and resources |
 | Details | Necessary contact fields and optional notes | Accessible errors; no separate website account required in the proposed MVP |
-| Review | Service, technician, date/time, price, location, and policy | Explicit final confirmation action; no card or payment collection in MVP |
+| Review | Service, technician, date/time, price, location, and policy | Explicit confirmation. Card requirement off initially; when enabled, complete secure card setup and agree to applicable fees without an upfront charge |
 | Result | Provider-confirmed appointment or clear unresolved status | A failed/uncertain submission must not show success or invite repeated blind retries |
 | Manage | Secure provider link to view, reschedule, or cancel | Confirm ownership and policy eligibility before changing the appointment |
 
@@ -198,7 +198,7 @@ On reschedule, show the existing appointment, choose a new available time, revie
 
 ## Operating choices still needed
 
-The initial requirements already list these questions; this table makes the tradeoffs concrete for owner review. The no-online-payment MVP scope is confirmed; other proposed defaults remain pending.
+The initial requirements already list these questions; this table makes the tradeoffs concrete for owner review. Custom admin and saved-card/fee controls in MVP initially off are confirmed; detailed operating rules remain pending.
 
 | Choice | Proposed default to evaluate | What could change it |
 | --- | --- | --- |
@@ -206,7 +206,7 @@ The initial requirements already list these questions; this table makes the trad
 | Confirmation | Instant for standardized, reliably timed services | Complex nail art or staffing review may require an explicit request/approval workflow |
 | Service combinations | One service or predefined bundle for initial launch | Frequent manicure/pedicure combinations or multi-staff services may require richer scheduling immediately |
 | Technician preference | Any eligible technician, with optional named choice | Salon assignment/rotation practices |
-| Payment | Confirmed: no online payment, deposit, or card hold | Owner may approve payment options in a later phase |
+| Card and fee controls | Confirmed: implement in MVP, initially off; saved card with no upfront charge | Exact fee policy, processor, and live activation need approval |
 | Appointment management | Guest management through secure provider links | Provider limitations; avoid introducing an unnecessary new account |
 | Reminder | Provider-managed email; evaluate a 24-hour reminder | Owner preference, appointments booked at short notice, supported channels and costs |
 | Cancellation cutoff | No number selected yet | Owner must define policy before customer-facing copy is written |

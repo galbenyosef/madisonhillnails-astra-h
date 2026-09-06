@@ -8,7 +8,7 @@ Help local customers discover Madison Hill Nails, understand its services and pr
 
 Primary audiences: new local visitors comparing salons; returning customers ready to book; staff managing capacity. Launch with one location, English content, and appointment times explicitly shown in `America/New_York`. Language expansion depends on owner input.
 
-Owner clarification: appointments are currently managed manually; the website will be hosted on Netlify and is expected to have low traffic. Initial and monthly budgets are undecided. Online payments, deposits, and card holds are excluded from MVP; the owner may add payment options to secure appointments later.
+Owner clarification: appointments are currently managed manually; the website will be hosted on Netlify and is expected to have low traffic. Initial and monthly budgets are undecided. The latest scope requires a custom admin dashboard and payment/cancellation-fee controls built in MVP but disabled initially. This supersedes the earlier plan to defer payment implementation.
 
 ## Scope boundaries
 
@@ -49,10 +49,13 @@ Initial recommendation: one customer and one service or a predefined service bun
 | B08 | Reschedule/cancel | Verified customer or secure provider link can modify/cancel within the policy. Expired links and cutoff violations offer a clear staff contact path. |
 | B09 | Reminder | Proposed email reminder about 24 hours before the appointment; owner chooses timing. Changes/cancellations suppress obsolete reminders. SMS only if approved and supported. |
 | B10 | Staff calendar | Staff can create telephone/walk-in bookings, edit appointments, block time, record cancellations/no-shows, and view relevant customer details. |
-| B11 | Administrative setup | Owner controls staff eligibility, services, prices, durations, hours, holidays, and policy settings through the provider dashboard. |
+| B11 | Custom administrative setup | Owner manages appointments, availability, and policy settings through a private dashboard within the website. Required operations use server-authorized APIs; no separate unsynchronized admin calendar. |
 | B12 | Appointment states | Staff and customer messages distinguish requested versus confirmed appointments if manual approval is enabled; canceled/no-show/completed states are reflected accurately. |
-| B13 | No online payment requirement | Booking succeeds without collecting payment, a deposit, or a card hold. Keep existing in-person payment handling outside the website; confirm accepted methods for public copy. Payment integration is deferred. |
-| B14 | Staff access | Individual provider accounts and appropriate permissions; test that staff cannot access owner-only configuration unintentionally. |
+| B13 | Configurable payment protection | Build payment requirements and late-cancellation fees in MVP, initially off. Off mode books without collecting payment/card details; enabled mode enforces the approved policy. No live charges until activation is approved. |
+| B14 | Staff access | Individual admin accounts and server-enforced roles; owner-only payment/policy settings and authorized fee waiver/refund actions. |
+| B15 | Manual appointment availability | Adding an appointment blocks its full staff/resource interval online immediately; changes move the block and cancellation releases it. Competing admin/online writes cannot silently overbook. |
+
+The [custom admin and payment specification](08-admin-and-payment-controls.md) defines detailed requirements A01–A12, policy versioning, fee processing, and acceptance cases. Card-on-file with no upfront charge is confirmed. Fee amount, cutoff, and enforcement rules remain open; approximately one week is a proposed configurable window, not a finalized policy.
 
 ## Booking journey
 
@@ -72,9 +75,9 @@ flowchart TD
 
 ## Deferred features
 
-Native mobile apps; custom customer accounts/dashboard; loyalty and referrals; gift card sales; online product sales; memberships; waitlists; group/bridal bookings; advanced multi-service allocation; multilingual content; custom staff software; marketing campaigns; custom notification service. Move a feature into MVP only when an operational need justifies its implementation and cost.
+Native mobile apps; custom customer accounts/dashboard; loyalty and referrals; gift card sales; online product sales; memberships; waitlists; group/bridal bookings; advanced multi-service allocation; multilingual content; staff payroll/inventory tools; marketing campaigns; custom reminder service. The appointment admin dashboard and payment/fee controls are now in MVP. Move other features into MVP only when an operational need justifies implementation and cost.
 
-Online payments, booking deposits, card-on-file collection, and no-show charging are explicitly deferred by the owner. Do not add checkout screens, payment SDKs, or payment credentials to MVP. Booking confirmations must not imply a payment was taken.
+Live payment/fee activation is deferred; implementation is included. Both controls start disabled. No payment details are requested while disabled, and confirmations must reflect actual payment status. A separate no-show fee rule has not been requested or approved and must not be inferred from the late-cancellation policy.
 
 ## Success measures
 
