@@ -2,6 +2,8 @@
 
 Status: sequencing proposal, not authorization to build or a delivery-date commitment.
 
+The [architecture and prioritized backlog](09-architecture-and-mvp-backlog.md) expands these phases into implementation work packages, including the custom-scheduling recommendation's data, notification, and operational responsibilities. Architecture remains pending approval.
+
 ## Phases and approval gates
 
 | Phase | Deliverable | Completion / next gate |
@@ -53,7 +55,7 @@ Proposed screens: welcome/sign-in, services, technician selection, date/time pic
 
 Users can book, modify, or cancel without calling when policy permits. After a change, refresh from the authoritative provider and show the confirmed result. Include empty/error/offline states; do not submit an offline reservation as if it succeeded. Preserve a failed reschedule's original appointment. Handle expired sessions and management links safely. Include sign-out and an account/data deletion workflow appropriate to the selected platform requirements, verified during app planning.
 
-Use one shared booking backend for website custom flows and native apps. Share TypeScript contracts and validation where useful, while designing native navigation and accessibility separately. Begin with provider-managed reminders; custom push/reminders require the server workflow described in the technology plan. Native app pricing and app-store rules will be researched when that phase is approved.
+Use one shared booking backend for website custom flows and native apps. Share TypeScript contracts and validation where useful, while designing native navigation and accessibility separately. Reuse the MVP notification service selected with the backend; custom push adds later server/channel work. Native app pricing and app-store rules will be researched when that phase is approved.
 
 ## Launch acceptance and validation
 

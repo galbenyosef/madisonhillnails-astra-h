@@ -12,7 +12,7 @@ Owner clarification: appointments are currently managed manually; the website wi
 
 ## Scope boundaries
 
-The user requires scheduling in the MVP. This proposal also includes guest rescheduling/cancellation through the booking provider and basic provider-managed email confirmations/reminders at launch, so those conveniences do not have to wait for a native app. SMS is conditional on the chosen plan and owner approval. These additions are recommendations, not yet approved requirements.
+The user requires scheduling in the MVP. This proposal also includes guest rescheduling/cancellation and basic email confirmations/reminders at launch. Under the latest custom-backend recommendation, our shared API and notification service provide these flows; a managed scheduler is an alternative pending architecture approval. SMS remains conditional on owner approval. These additions are recommendations, not yet approved requirements.
 
 Initial recommendation: one customer and one service or a predefined service bundle per appointment; any suitable technician or a specific technician if supported. Confirm whether combinations such as manicure plus pedicure require multiple staff or shared chairs before selecting the provider. Complex group bookings are a later phase unless essential to daily operations.
 
@@ -44,7 +44,7 @@ Initial recommendation: one customer and one service or a predefined service bun
 | B03 | Date/time selection | Times explicitly identify salon local time; unavailable and fully booked states offer another date or contact path. |
 | B04 | Guest booking | Customers can book without creating a separate website account. Required provider login, if any, must be evaluated before approval. |
 | B05 | Customer details | Collect only necessary name and contact details; optional notes are clearly labeled; policy acknowledgement is visible before submission. |
-| B06 | Reliable reservation | A success message appears only after the provider confirms the appointment. Repeated submissions and competing attempts cannot silently create duplicates or overlaps. |
+| B06 | Reliable reservation | A success message appears only after the authoritative scheduler confirms the appointment. Repeated submissions and competing attempts cannot silently create duplicates or overlaps. |
 | B07 | Confirmation | Customer receives service, date/time, location, booking reference, and management instructions. Staff see the same appointment. |
 | B08 | Reschedule/cancel | Verified customer or secure provider link can modify/cancel within the policy. Expired links and cutoff violations offer a clear staff contact path. |
 | B09 | Reminder | Proposed email reminder about 24 hours before the appointment; owner chooses timing. Changes/cancellations suppress obsolete reminders. SMS only if approved and supported. |
@@ -64,18 +64,18 @@ flowchart TD
     A[Book an appointment] --> B[Choose service and eligible technician]
     B --> C[Choose available salon-local date and time]
     C --> D[Enter contact details and review policy]
-    D --> E[Provider validates and reserves]
+    D --> E[Shared scheduler validates and reserves]
     E -->|Confirmed| F[Confirmation and secure management link]
     E -->|Slot unavailable| C
     E -->|Uncertain or failed| G[Check status or contact salon before retry]
-    F --> H[Provider reminder]
+    F --> H[Scheduled reminder]
     F --> I[Reschedule or cancel within policy]
     I --> J[Updated calendar and notifications]
 ```
 
 ## Deferred features
 
-Native mobile apps; custom customer accounts/dashboard; loyalty and referrals; gift card sales; online product sales; memberships; waitlists; group/bridal bookings; advanced multi-service allocation; multilingual content; staff payroll/inventory tools; marketing campaigns; custom reminder service. The appointment admin dashboard and payment/fee controls are now in MVP. Move other features into MVP only when an operational need justifies implementation and cost.
+Native mobile apps; custom customer accounts/dashboard; loyalty and referrals; gift card sales; online product sales; memberships; waitlists; group/bridal bookings; advanced multi-service allocation; multilingual content; staff payroll/inventory tools; marketing campaigns; custom SMS/push campaigns. The appointment admin dashboard, payment/fee controls, and proposed basic email notifications are in MVP. Move other features into MVP only when an operational need justifies implementation and cost.
 
 Live payment/fee activation is deferred; implementation is included. Both controls start disabled. No payment details are requested while disabled, and confirmations must reflect actual payment status. A separate no-show fee rule has not been requested or approved and must not be inferred from the late-cancellation policy.
 

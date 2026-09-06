@@ -182,7 +182,7 @@ Complete one entry per bookable service or predefined bundle. Use public service
 
 Proposed `/book` layout: salon name, “Book an appointment,” a concise location/time-zone statement, provider booking experience, and an always-available direct booking link/contact fallback. Keep the marketing gallery and parallax off this route. Opening booking should not load an additional full marketing page before the customer can select a service.
 
-For hosted scheduling, the provider controls the exact screens. The following describes the experience we must validate; it does not promise custom controls the provider may not support.
+The latest [architecture proposal](09-architecture-and-mvp-backlog.md) recommends a custom customer flow backed by the same API as admin. If the owner instead selects hosted scheduling, the provider controls its exact screens. The following is the experience to validate under the approved architecture; no flow has been implemented.
 
 | Step | Customer sees | Required behavior |
 | --- | --- | --- |

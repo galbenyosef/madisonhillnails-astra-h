@@ -16,6 +16,7 @@ Planning repository for a colorful, mobile-friendly nail salon website with onli
 6. [Research sources and business fact checks](docs/06-research.md)
 7. [Desktop/mobile wireframes, draft copy, and content checklist](docs/07-wireframes-and-content.md)
 8. [Custom admin dashboard and payment/cancellation controls](docs/08-admin-and-payment-controls.md)
+9. [Architecture recommendation and prioritized MVP backlog](docs/09-architecture-and-mvp-backlog.md)
 
 ## Working agreement
 

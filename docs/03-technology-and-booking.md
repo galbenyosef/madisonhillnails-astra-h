@@ -4,12 +4,14 @@ Researched September 6, 2026. Owner decisions: Netlify hosting, custom website a
 
 ## Recommended starting stack
 
+Latest recommendation for approval: Next.js/TypeScript/Tailwind on Netlify, Supabase Auth/PostgreSQL as the shared booking backend, Stripe saved-card/fee processing, and transactional email with durable jobs. This custom scheduling proposal and its tradeoffs are detailed in the [architecture/backlog](09-architecture-and-mvp-backlog.md); it is not an approved implementation decision. Managed-provider options below remain alternatives.
+
 | Layer | Proposal | Why and tradeoff |
 | --- | --- | --- |
 | Website | Next.js App Router + TypeScript | Pre-rendered marketing content plus a future server boundary for booking integrations. Built-in [metadata support](https://nextjs.org/docs/app/getting-started/metadata-and-og-images). More complexity than a purely static site, justified if the custom app roadmap proceeds. |
 | Styling | Tailwind CSS + CSS design tokens | Consistent responsive layout and brand colors through [theme variables](https://tailwindcss.com/docs/theme). Custom design still needs deliberate typography and composition. |
 | Motion | CSS first | Small decorative effects with reduced-motion support. Add a motion dependency only if an approved effect requires it. |
-| Booking | Re-evaluate API-backed scheduling against custom-admin and payment requirements | One authoritative calendar for online and manual bookings. The former Square-first recommendation is suspended pending its cancellation-fee API limitation; hosted booking alone does not satisfy custom administration. |
+| Booking | Custom scheduling service backed by PostgreSQL — recommendation pending approval | One authoritative calendar for online/admin/future app. Requires our own capacity, conflict, lifecycle, and notification implementation; managed APIs remain alternatives. |
 | Content | Typed local content for launch | Simple, reviewable changes in GitHub. Owner edits require a developer initially; choose a CMS during planning if independent editing is a launch requirement. |
 | Hosting | Netlify — owner selected | [Netlify supports Next.js through OpenNext](https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/), including App Router, caching, and image optimization. Evaluate Free for low usage; paid-plan choice requires owner approval. |
 | Version control | GitHub | Documentation and code history, reviewable changes, and later CI. No repository visibility or account assumption. |
@@ -22,7 +24,7 @@ The prior no-custom-backend plan is superseded by custom admin requirements. Pro
 
 ### Netlify deployment approach
 
-Keep the proposed Next.js + TypeScript + Tailwind stack, with public content pre-rendered and lightweight client interactions. Use Netlify's supported Next.js adapter and validate its build output at implementation time. Pre-rendering through the adapter is not a promise of zero function invocations. Avoid unnecessary per-request rendering, live social feeds, or background jobs for the marketing site. Prefer responsive compressed images and provider-hosted scheduling. [Netlify Next.js documentation](https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/).
+Keep the proposed Next.js + TypeScript + Tailwind stack, with public content pre-rendered and lightweight client interactions. Use Netlify's supported Next.js adapter and validate its build output at implementation time. Pre-rendering through the adapter is not a promise of zero function invocations. Avoid unnecessary per-request rendering, live social feeds, or background jobs for marketing content. Booking/admin use the shared secured API, with operational jobs separate from page rendering. [Netlify Next.js documentation](https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/).
 
 The future mobile app can reuse the secured API introduced for admin without changing the public website's host. Marketing pages remain pre-rendered; admin responses are private and authenticated. The authoritative scheduler handles availability/reservations, with notifications assigned explicitly to the selected provider or backend. A generic form submission is not a confirmed reservation.
 
@@ -82,7 +84,7 @@ Admin authentication/API, private storage, and payment/fee integration now belon
 
 MVP API responsibilities: authenticate staff and enforce roles; authorize customer management operations; keep credentials server-side; validate requests; rate-limit abuse; use idempotency; enforce appointment conflicts; verify webhook signatures; deduplicate events; reconcile missed/out-of-order events; redact logs. The selected scheduler is authoritative for appointment state. A provider adapter isolates vendor-specific code but does not eliminate migration work. Full requirements are in [admin and payment controls](08-admin-and-payment-controls.md).
 
-For a future custom reminder service, store appointment version, channel, consent/preferences, intended send time, and delivery state. Recheck the live appointment before sending, invalidate jobs after changes, and avoid duplicate provider/custom messages. A durable server-side worker sends reminders, independent of whether the mobile app is open. Push is optional with an email/SMS fallback according to customer settings. Review communication requirements when choosing channels; do not invent legal policy in this planning phase.
+Under the custom-backend recommendation, basic email confirmations/reminders require an MVP notification service with durable jobs; advanced SMS/push remains later scope. Store appointment revision, channel/preferences, intended send time, and delivery state. Recheck live state, invalidate obsolete jobs, and avoid duplicate sends. Select and budget the email/worker providers before implementation; details are in the [architecture plan](09-architecture-and-mvp-backlog.md).
 
 ## Operating cost snapshot
 
@@ -95,7 +97,8 @@ USD, published prices observed September 6, 2026; excludes tax, payment processi
 | Acuity | Monthly billing: Starter $20, Standard $34, Premium $61; annual equivalents $16/$27/$49 per month. Premium lists custom API; Standard/Premium list text reminders. | [Acuity pricing](https://www.acuityscheduling.com/pricing?btn=nav&entry_point=acuity) |
 | Fresha | Independent $19.95/month; Team $14.95/bookable team member/month. Marketplace-acquired new clients carry a stated 20% one-time fee, minimum $6; distinguish direct bookings. | [Fresha pricing](https://www.fresha.com/pricing) |
 | Domain | Domain-specific quote needed, including renewal; availability not checked | Pending domain choice |
-| Admin/auth/private storage/payment operations | MVP cost now required; estimate after backend choice, including API tier, transaction/refund costs, webhooks, and support | Pending technical feasibility and payment mode |
+| Supabase candidate | Free $0; Pro from $25/month; production plan and additional environments require review | [Supabase pricing](https://supabase.com/pricing) |
+| Admin/payment/email operations | Include processing/refund costs, transactional email, durable jobs, monitoring, and support in the estimate | Pending backend approval and detailed policy; saved-card mode confirmed |
 | Photography, CMS, analytics, app distribution | Quote only if selected; no subscriptions proposed for purchase now | Pending scope |
 
 Budget approach: keep hosting, scheduling/API access, admin/auth/database, payments, domain renewal, implementation, and maintenance separate. The owner has not set a spending cap; this does not authorize spending. Earlier hosted-only/free scenarios no longer represent this expanded MVP. Use the price table as vendor inputs, not a total quote; custom admin may need paid API access now and payment implementation adds work even when initially disabled. Low website traffic does not eliminate these operational costs.

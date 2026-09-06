@@ -42,7 +42,11 @@ Apple Maps details were visible in search results; a subsequent direct open retu
 | [Next.js metadata](https://nextjs.org/docs/app/getting-started/metadata-and-og-images) | Metadata and sharing assets |
 | [Tailwind theme variables](https://tailwindcss.com/docs/theme) | Reusable brand tokens |
 | [Expo documentation](https://docs.expo.dev/) | Future cross-platform app option |
-| [Supabase row-level security](https://supabase.com/docs/guides/database/postgres/row-level-security) | Optional later customer-data access controls |
+| [Supabase row-level security](https://supabase.com/docs/guides/database/postgres/row-level-security) | Proposed private admin/customer-data access controls for the expanded MVP |
+| [Supabase Auth](https://supabase.com/docs/guides/auth) | Proposed managed staff identity for custom admin; application authorization remains our responsibility |
+| [Supabase pricing](https://supabase.com/pricing) | Database/auth cost inputs, inactivity behavior, and backup differences |
+| [PostgreSQL range types](https://www.postgresql.org/docs/current/rangetypes.html) | Proposed non-overlap constraints for exclusive resource reservations |
+| [Stripe webhooks](https://docs.stripe.com/webhooks) | Signature verification, event delivery behavior, and durable reconciliation requirements |
 | [Netlify pricing](https://www.netlify.com/pricing/) | Owner-selected hosting; plan costs, usage limits, and account-specific plan verification |
 | [Next.js on Netlify](https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/) | OpenNext support, rendering, caching, image handling, and implementation-time compatibility checks |
 | [Google JavaScript SEO](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) | Rendered content and crawlability |
