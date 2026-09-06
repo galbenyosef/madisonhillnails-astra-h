@@ -1088,3 +1088,48 @@
     width: 160px;
   }
 }
+
+/* Preserve the salon's full nail designs instead of cropping them into a banner. */
+.salon-campaign {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: #f0efeb;
+}
+.salon-campaign .image-plane {
+  position: relative;
+  inset: auto;
+  min-width: 0;
+}
+.salon-campaign .image-plane img {
+  object-fit: contain;
+  object-position: center;
+}
+.print-image {
+  display: block;
+}
+.color-photo,
+.local-art {
+  background: #f0efeb;
+}
+.color-photo .image-plane,
+.local-art .image-plane {
+  inset: 0;
+}
+.color-photo .image-plane img,
+.local-art .image-plane img {
+  object-fit: contain;
+  object-position: center;
+}
+.art-credit a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 760px) {
+  .salon-campaign {
+    grid-template-columns: 1fr;
+  }
+  .salon-campaign .campaign-companion {
+    display: none;
+  }
+}

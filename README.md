@@ -31,7 +31,8 @@ Open `http://localhost:3000`. The public site works without credentials; online 
 10. [Current approved build scope, $0 services, and deferred SMS](docs/10-approved-build-scope.md)
 11. [Implementation, private configuration, free services, and operations](docs/11-build-and-operations.md)
 12. [Validation results and remaining launch checks](docs/12-validation.md)
-13. [Approved editorial redesign, parallax, and image provenance](docs/13-editorial-redesign.md)
+13. [Editorial design, current wordmark, and parallax removal](docs/13-editorial-redesign.md)
+14. [Real salon photography and Instagram sources](docs/14-salon-photography.md)
 
 ## Working agreement
 

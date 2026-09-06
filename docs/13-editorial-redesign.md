@@ -18,9 +18,9 @@ The owner subsequently rejected the parallax design and requested a black “mad
 
 The earlier three-scene parallax implementation and its motion tests are preserved in Git history, but are no longer part of the current page.
 
-## Original artwork and exact prompts
+## Original artwork and exact prompts — superseded
 
-Both images were generated with the built-in image-generation tool, inspected, and copied into the repository. No API key, paid external asset subscription, or third-party image hotlink was added. They are creative nail inspiration, not evidence of the salon's work. Replace with approved salon photography when supplied.
+The following two images were generated for the earlier design. They are now unused; [real salon photography](14-salon-photography.md) replaces them on the homepage and in social metadata. Both were generated with the built-in image-generation tool, inspected, and copied into the repository. No API key, paid external asset subscription, or third-party image hotlink was added. They are creative nail inspiration, not evidence of the salon's work. Replace with approved salon photography when supplied.
 
 ### `public/images/editorial-cherry.png`
 

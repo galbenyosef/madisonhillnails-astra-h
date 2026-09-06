@@ -12,6 +12,7 @@ export default async function Home() {
     "@context": "https://schema.org",
     "@type": "NailSalon",
     name: "Madison Hill Nails",
+    sameAs: ["https://www.instagram.com/madisonhillnails/"],
     description:
       "Nail care, pedicures, and spa treatments in Madison, New Jersey.",
     address: {
@@ -56,17 +57,37 @@ export default async function Home() {
             </div>
           </div>
           <div className="edit-campaign">
-            <div className="campaign-image">
-              <div className="image-plane">
+            <div className="campaign-image salon-campaign">
+              <a
+                className="image-plane"
+                href="https://www.instagram.com/p/Dc7V_RUNYvq/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View our mint and chocolate nail art on Instagram (opens a new tab)"
+              >
                 <Image
-                  src="/images/editorial-cherry.png"
-                  alt="Editorial inspiration: glossy cherry red nails against mint satin"
+                  src="/images/salon-mint-chocolate.jpg"
+                  alt="Mint, chocolate brown, and polka-dot almond nails by Madison Hill Nails"
                   fill
                   preload
-                  sizes="(max-width: 760px) 100vw, 82vw"
+                  sizes="(max-width: 760px) 100vw, 41vw"
                 />
-              </div>
-              <span className="campaign-index">COLOR STUDY — 001</span>
+              </a>
+              <a
+                className="image-plane campaign-companion"
+                href="https://www.instagram.com/p/DbOMGqqRXX8/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View our pink and yellow nail art on Instagram (opens a new tab)"
+              >
+                <Image
+                  src="/images/salon-pink-yellow.jpg"
+                  alt="Pink French tips, yellow accent nails, and delicate white details by Madison Hill Nails"
+                  fill
+                  sizes="41vw"
+                />
+              </a>
+              <span className="campaign-index">FROM OUR SALON</span>
             </div>
             <div className="campaign-note">
               <span>
@@ -79,15 +100,21 @@ export default async function Home() {
             </div>
             <div className="floating-print">
               <figure>
-                <div className="print-image">
+                <a
+                  className="print-image"
+                  href="https://www.instagram.com/p/DaF-Ngtx0N6/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="View our yellow floral nails on Instagram (opens a new tab)"
+                >
                   <Image
-                    src="/images/editorial-butter.png"
-                    alt="Editorial inspiration: butter yellow nails with a red sphere"
+                    src="/images/salon-yellow-floral.jpg"
+                    alt="Yellow French tips with white floral details by Madison Hill Nails"
                     fill
                     sizes="(max-width: 760px) 30vw, 20vw"
                   />
-                </div>
-                <figcaption>A LITTLE UNEXPECTED. VERY YOU.</figcaption>
+                </a>
+                <figcaption>OUR WORK. YOUR NEXT MOOD.</figcaption>
               </figure>
             </div>
             <Link className="booking-orbit" href="/book">
@@ -103,7 +130,7 @@ export default async function Home() {
             <span>
               <MapPin size={13} /> 349 MAIN ST · MADISON, NJ
             </span>
-            <span>CREATIVE IMAGERY · NAIL INSPIRATION</span>
+            <span>NAIL ART BY MADISON HILL NAILS</span>
             <a href="#ritual">
               SCROLL TO EXPLORE <ArrowDown size={14} />
             </a>
@@ -230,15 +257,21 @@ export default async function Home() {
           </div>
           <div className="color-collage edit-wrap">
             <div className="color-photo">
-              <div className="image-plane">
+              <a
+                className="image-plane"
+                href="https://www.instagram.com/p/DbEhQ4dxSRQ/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View our pink wave nail art on Instagram (opens a new tab)"
+              >
                 <Image
-                  src="/images/editorial-butter.png"
-                  alt="Butter yellow manicure color inspiration on a lilac backdrop"
+                  src="/images/salon-pink-waves.jpg"
+                  alt="Pink and yellow nails with flowing stripes and white palm details by Madison Hill Nails"
                   fill
                   sizes="(max-width: 760px) 85vw, 40vw"
                 />
-              </div>
-              <span className="photo-label">THE BUTTER YELLOW STUDY</span>
+              </a>
+              <span className="photo-label">A LITTLE COLOR, BY US</span>
             </div>
             <div className="color-caption">
               <span>less ordinary.</span>
@@ -249,21 +282,36 @@ export default async function Home() {
           <div className="edit-wrap">
             <ColorStudio />
             <p className="art-credit">
-              Original creative imagery for inspiration. These images do not
-              represent the salon’s work or available shades.
+              Nail photography from Madison Hill Nails.{" "}
+              <a
+                href="https://www.instagram.com/madisonhillnails/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                See more of our work on Instagram{" "}
+                <span className="sr-only">(opens a new tab)</span>
+              </a>
+              . Color samples are for inspiration; ask us about current shades
+              and designs.
             </p>
           </div>
         </section>
         <section className="edit-local edit-wrap">
           <div className="local-art">
-            <div className="image-plane">
+            <a
+              className="image-plane"
+              href="https://www.instagram.com/p/DbOMGqqRXX8/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View our pink and yellow nail art on Instagram (opens a new tab)"
+            >
               <Image
-                src="/images/editorial-cherry.png"
-                alt="Cherry red nail inspiration with soft satin texture"
+                src="/images/salon-pink-yellow.jpg"
+                alt="Pink and yellow manicure with fine white detailing, created at Madison Hill Nails"
                 fill
                 sizes="(max-width: 760px) 100vw, 45vw"
               />
-            </div>
+            </a>
             <span className="local-stamp">
               MEET YOU
               <br />

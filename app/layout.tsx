@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/images/editorial-cherry.png",
-        width: 1536,
-        height: 1024,
-        alt: "Cherry red manicure editorial inspiration",
+        url: "/images/salon-mint-chocolate.jpg",
+        width: 3024,
+        height: 2607,
+        alt: "Mint and chocolate nail art by Madison Hill Nails",
       },
     ],
   },
@@ -61,6 +61,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
             <p>349 Main St, Madison, NJ 07940</p>
             <nav aria-label="Footer">
+              <a
+                href="https://www.instagram.com/madisonhillnails/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram<span className="sr-only"> (opens a new tab)</span>
+              </a>
               <Link href="/privacy">Privacy</Link>
               <Link href="/policies">Booking policies</Link>
               <Link href="/admin">Staff login</Link>

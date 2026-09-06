@@ -12,7 +12,8 @@ Research date: September 6, 2026. Prices and product entitlements can change. Pu
 | Phone | Both directory results show (973) 660-0001 | Candidate only; confirm before publishing |
 | Hours, staff, parking, ratings | Directory material exists but is not owner verified | Do not publish as verified facts |
 | Existing website | User reports none; Apple Maps search result includes an unverified external website field | Do not treat the listed website as official |
-| Instagram/Yelp/Google | User says profiles exist; direct official identities not established in this pass | Request exact profile links; do not guess handles or map IDs |
+| Instagram | Owner supplied [@madisonhillnails](https://www.instagram.com/madisonhillnails/); public profile and linked nail posts were inspected | Confirmed image source; see [photo provenance](14-salon-photography.md) |
+| Yelp/Google | User says profiles exist; exact official profile links remain unconfirmed | Request exact profile links; do not guess handles or map IDs |
 
 Apple Maps details were visible in search results; a subsequent direct open returned an error. Yahoo's directory page was available. Neither is equivalent to owner verification. No review excerpts or reviewer identities have been copied into the proposed website content.
 
