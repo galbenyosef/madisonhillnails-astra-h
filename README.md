@@ -1,5 +1,6 @@
 # Madison Hill Nails
 
+![Madison Hill Nails salon](docs/cover.png)
 Project repository for a colorful, mobile-friendly nail salon website with online scheduling and a future companion app.
 
 **Status:** first MVP implementation built and locally tested, September 6, 2026. Includes the public website, authenticated customer booking, and custom staff dashboard. Live database/email setup and salon operating data are still required before accepting bookings. No hosted service, paid subscription, or production deployment has been provisioned. [Current approved scope and cost constraints](docs/10-approved-build-scope.md) supersede conflicting earlier proposals, including saved cards, guest booking, and Supabase Auth.
